@@ -169,16 +169,35 @@ Initialized with love in JavaScript ❤️`;
                   <label className="text-sm font-medium">Age (Digital Years):</label>
                   <span className="text-accent font-bold">{character.age}</span>
                 </div>
-                <Slider
-                  value={[character.age]}
-                  onValueChange={(value) => handleSliderChange('age', value)}
-                  max={6789}
-                  min={100}
-                  step={50}
-                  className="w-full"
-                />
+                  <Slider
+                    value={[character.age]}
+                    onValueChange={(value) => handleSliderChange('age', value)}
+                    max={6789}
+                    min={-537}
+                    step={50}
+                    className="w-full"
+                    thumbGlow
+                  />
                 <div className="text-xs text-muted-foreground mt-1">
-                  Selected: {character.age} cycles
+                  Selected: {character.age} years old
+                </div>
+              </div>
+
+                            {/* Entity Species */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Entity Species:</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {Object.keys(ENTITY_SPECIES).map((species) => (
+                    <Button
+                      key={species}
+                      variant={character.species === species ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('species', species)}
+                      className="text-xs h-8"
+                    >
+                      {species}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
@@ -218,7 +237,7 @@ Initialized with love in JavaScript ❤️`;
                 </div>
               </div>
 
-              {/* Entity Species */}
+              {/* Entity Species
               <div>
                 <label className="text-sm font-medium mb-2 block">Entity Species:</label>
                 <div className="grid grid-cols-3 gap-2">
@@ -234,7 +253,7 @@ Initialized with love in JavaScript ❤️`;
                     </Button>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Core Personality */}
               <div>

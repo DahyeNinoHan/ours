@@ -5,6 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Character } from "@/types/character";
 import { useToast } from "@/hooks/use-toast";
 import { callChatAPI } from "@/utils/chatApi";
+import GhostSVG from "./characters/GhostSVG";
+import SageSVG from "./characters/SageSVG";
+import SpiritSVG from "./characters/SpiritSVG";
+import ShamanSVG from "./characters/ShamanSVG";
+import QuantumSVG from "./characters/QuantumSVG";
+import NeuralSVG from "./characters/NeuralSVG";
 
 interface ChatInterfaceProps {
   character: Character;
@@ -186,7 +192,29 @@ How may I assist your consciousness today?`,
         {/* Entity Status */}
         <Card className="terminal-panel p-4 lg:col-span-1">
           <h2 className="text-sm font-bold neon-text mb-4 text-center">ENTITY STATUS</h2>
-          
+
+          {/* Character SVG Preview */}
+          <div className="flex justify-center mb-4">
+            {character.species === 'Digital Ghost' && (
+              <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-20 h-20" />
+            )}
+            {character.species === 'AI Sage' && (
+              <SageSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-20 h-20" />
+            )}
+            {character.species === 'Data Spirit' && (
+              <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
+            )}
+            {character.species === 'Cyber Shaman' && (
+              <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-20 h-20" />
+            )}
+            {character.species === 'Quantum Being' && (
+              <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-20 h-20" />
+            )}
+            {character.species === 'Neural Entity' && (
+              <NeuralSVG colors={{ baseColor: '#00fff7', secondaryColor: '#8000ff', accentColor: '#32cd32' }} className="w-20 h-20" />
+            )}
+          </div>
+
           <div className="space-y-3 text-xs mb-6">
             <div>
               <span className="text-muted-foreground">Entity:</span>
