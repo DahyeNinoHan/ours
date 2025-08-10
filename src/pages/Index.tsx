@@ -2,7 +2,6 @@ import { useState } from "react";
 import { CharacterCreator } from "@/components/CharacterCreator";
 import { ChatInterface } from "@/components/ChatInterface";
 import { DigitalMeditation } from "@/components/DigitalMeditation";
-import { EmotionDashboard } from "@/components/EmotionDashboard";
 import { Character } from "@/types/character";
 
 const Index = () => {
@@ -39,14 +38,6 @@ const Index = () => {
     );
   }
 
-  if (currentView === "emotions" && character) {
-    return (
-      <EmotionDashboard 
-        character={character} 
-        onBack={handleBackToChat}
-      />
-    );
-  }
 
   if (currentView === "chat" && character) {
     return (
@@ -54,7 +45,6 @@ const Index = () => {
         character={character} 
         onBack={handleBackToCreator}
         onMeditation={handleMeditation}
-        onEmotions={handleEmotions}
       />
     );
   }
