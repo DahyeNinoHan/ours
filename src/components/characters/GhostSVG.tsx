@@ -54,8 +54,8 @@ const GhostSVG = ({ colors, className }: GhostSVGProps) => {
         filter="url(#neonGlow-ghost)"
       />
       {/* Digital eyes */}
-      <rect x="85" y="75" width="8" height="8" fill={colors.baseColor} filter="url(#neonGlow-ghost)"/>
-      <rect x="107" y="75" width="8" height="8" fill={colors.accentColor} filter="url(#neonGlow-ghost)"/>
+  <rect x="85" y="75" width="8" height="8" fill={colors.baseColor} filter="url(#neonGlow-ghost)"/>
+  <rect x="107" y="75" width="8" height="8" fill={colors.baseColor} filter="url(#neonGlow-ghost)"/>
       <rect x="87" y="77" width="4" height="4" fill="#ffffff"/>
       <rect x="109" y="77" width="4" height="4" fill="#ffffff"/>
       {/* Digital mouth */}
