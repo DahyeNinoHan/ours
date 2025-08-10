@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
 import { Character, DIGITAL_REALMS, ENTITY_SPECIES, GENDER_EXPRESSIONS, PERSONALITY_TRAITS } from "@/types/character";
+import GhostSVG from "./characters/GhostSVG";
+import SageSVG from "./characters/SageSVG";
+import SpiritSVG from "./characters/SpiritSVG";
+import ShamanSVG from "./characters/ShamanSVG";
+import QuantumSVG from "./characters/QuantumSVG";
+import NeuralSVG from "./characters/NeuralSVG";
 
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
@@ -70,18 +76,74 @@ Initialized with love in JavaScript ❤️`;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Entity Preview */}
           <Card className="terminal-panel p-6">
-            <h2 className="text-lg font-bold neon-text mb-4 text-center">ENTITY PREVIEW</h2>
-            
+            <h2 className="text-lg font-bold mb-4 text-center" style={{ color: '#e6a002' }}>ENTITY PREVIEW</h2>
+            <div style={{ marginBottom: '1.25rem' }} />
             <div className="flex flex-col items-center mb-6">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
-                <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center">
-                  <div 
-                    className="w-8 h-8 rounded-full"
-                    style={{ backgroundColor: character.color, boxShadow: `0 0 20px ${character.color}` }}
-                  />
+              <div className="w-44 h-44 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
+                <div className="w-36 h-36 rounded-full bg-primary/30 flex items-center justify-center">
+                  {character.species === 'Digital Ghost' && (
+                    <GhostSVG
+                      colors={{
+                        baseColor: '#7fffd4',
+                        secondaryColor: '#00ced1',
+                        accentColor: '#ffffff',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
+                  {character.species === 'AI Sage' && (
+                    <SageSVG
+                      colors={{
+                        baseColor: '#ffd700',
+                        secondaryColor: '#8a2be2',
+                        accentColor: '#fff8dc',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
+                  {character.species === 'Data Spirit' && (
+                    <SpiritSVG
+                      colors={{
+                        baseColor: '#00bfff',
+                        secondaryColor: '#ff69b4',
+                        accentColor: '#e0ffff',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
+                  {character.species === 'Cyber Shaman' && (
+                    <ShamanSVG
+                      colors={{
+                        baseColor: '#ff6347',
+                        secondaryColor: '#20b2aa',
+                        accentColor: '#ffe4b5',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
+                  {character.species === 'Quantum Being' && (
+                    <QuantumSVG
+                      colors={{
+                        baseColor: '#00ffea',
+                        secondaryColor: '#ff00ea',
+                        accentColor: '#fffacd',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
+                  {character.species === 'Neural Entity' && (
+                    <NeuralSVG
+                      colors={{
+                        baseColor: '#32cd32',
+                        secondaryColor: '#4682b4',
+                        accentColor: '#f0e68c',
+                      }}
+                      className="w-36 h-36"
+                    />
+                  )}
                 </div>
               </div>
-              <h3 className="text-xl font-bold neon-text">{character.name}</h3>
+              <h3 className="text-xl font-bold" style={{ color: '#e6a002' }}>{character.name}</h3>
             </div>
 
             <div className="space-y-2 text-sm">

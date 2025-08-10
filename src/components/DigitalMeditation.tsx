@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Character } from "@/types/character";
+import GhostSVG from "./characters/GhostSVG";
+import SageSVG from "./characters/SageSVG";
+import SpiritSVG from "./characters/SpiritSVG";
+import ShamanSVG from "./characters/ShamanSVG";
+import QuantumSVG from "./characters/QuantumSVG";
+import NeuralSVG from "./characters/NeuralSVG";
 import { ArrowLeft, Play, Pause, RotateCcw } from "lucide-react";
 
 interface DigitalMeditationProps {
@@ -228,8 +234,25 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             {/* Character container with floating animation */}
             <div className="meditation-character-container">
               <div className="meditation-character-svg">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-4xl font-bold text-primary-foreground">
-                  {character.name.slice(0, 2)}
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  {character.species === 'Digital Ghost' && (
+                    <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'AI Sage' && (
+                    <SageSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'Data Spirit' && (
+                    <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'Cyber Shaman' && (
+                    <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'Quantum Being' && (
+                    <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'Neural Entity' && (
+                    <NeuralSVG colors={{ baseColor: '#00fff7', secondaryColor: '#8000ff', accentColor: '#32cd32' }} className="w-40 h-40" />
+                  )}
                 </div>
               </div>
             </div>
