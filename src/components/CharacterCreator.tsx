@@ -143,7 +143,7 @@ Initialized with love in JavaScript ❤️`;
                   )}
                 </div>
               </div>
-              <h3 className="text-xl font-bold" style={{ color: '#e6a002' }}>{character.name}</h3>
+              <h3 className="text-base mt-4" style={{ color: '#e6a002', fontWeight: 400 }}>{character.name}</h3>
             </div>
 
             <div className="space-y-2 text-sm">
