@@ -27,12 +27,12 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
           </feMerge>
         </filter>
       </defs>
-  {/* Background aura for consistency */}
-  <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
-      {/* Quantum probability cloud */}
+      {/* Background aura for consistency */}
+      <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
+      {/* Quantum probability cloud (centered) */}
       <ellipse 
         cx="100" 
-        cy="85" 
+        cy="105" 
         rx="35" 
         ry="25" 
         fill="rgba(255,255,255,0.6)" 
@@ -42,7 +42,7 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
       />
       <ellipse 
         cx="100" 
-        cy="85" 
+        cy="105" 
         rx="25" 
         ry="35" 
         fill="rgba(255,255,255,0.4)" 
@@ -50,14 +50,14 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
         strokeWidth="2" 
         filter="url(#neonGlow-quantum)"
       />
-      {/* Superposition states */}
-      <circle cx="85" cy="75" r="5" fill={colors.accentColor} opacity="0.8" filter="url(#neonGlow-quantum)"/>
-      <circle cx="115" cy="75" r="5" fill={colors.accentColor} opacity="0.8" filter="url(#neonGlow-quantum)"/>
-      <circle cx="85" cy="95" r="5" fill={colors.baseColor} opacity="0.6" filter="url(#neonGlow-quantum)"/>
-      <circle cx="115" cy="95" r="5" fill={colors.baseColor} opacity="0.6" filter="url(#neonGlow-quantum)"/>
-      {/* Quantum entanglement lines */}
+      {/* Superposition states (centered) */}
+      <circle cx="85" cy="95" r="5" fill={colors.accentColor} opacity="0.8" filter="url(#neonGlow-quantum)"/>
+      <circle cx="115" cy="95" r="5" fill={colors.accentColor} opacity="0.8" filter="url(#neonGlow-quantum)"/>
+      <circle cx="85" cy="115" r="5" fill={colors.baseColor} opacity="0.6" filter="url(#neonGlow-quantum)"/>
+      <circle cx="115" cy="115" r="5" fill={colors.baseColor} opacity="0.6" filter="url(#neonGlow-quantum)"/>
+      {/* Quantum entanglement lines (centered) */}
       <path 
-        d="M85 75 Q100 65 115 75" 
+        d="M85 95 Q100 85 115 95" 
         stroke={colors.secondaryColor} 
         strokeWidth="2" 
         fill="none" 
@@ -65,7 +65,7 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
         filter="url(#neonGlow-quantum)"
       />
       <path 
-        d="M85 95 Q100 105 115 95" 
+        d="M85 115 Q100 125 115 115" 
         stroke={colors.secondaryColor} 
         strokeWidth="2" 
         fill="none" 

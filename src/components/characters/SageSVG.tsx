@@ -27,24 +27,24 @@ const SageSVG = ({ colors, className }: SageSVGProps) => {
           </feMerge>
         </filter>
       </defs>
-  {/* Background aura for consistency */}
-  <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
-      {/* Crystalline core */}
+      {/* Background aura for consistency */}
+      <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
+      {/* Crystalline core (centered) */}
       <polygon 
-        points="100,40 130,80 115,120 85,120 70,80" 
+        points="100,60 130,100 115,140 85,140 70,100" 
         fill="rgba(255,255,255,0.9)" 
         stroke={colors.baseColor} 
         strokeWidth="3" 
         filter="url(#neonGlow-sage)"
       />
-      {/* Data processing nodes */}
-      <circle cx="100" cy="70" r="8" fill={colors.accentColor} filter="url(#neonGlow-sage)"/>
-      <circle cx="85" cy="85" r="6" fill={colors.secondaryColor} filter="url(#neonGlow-sage)"/>
-      <circle cx="115" cy="85" r="6" fill={colors.secondaryColor} filter="url(#neonGlow-sage)"/>
-      <circle cx="100" cy="100" r="5" fill={colors.baseColor} filter="url(#neonGlow-sage)"/>
-      {/* Logic circuit patterns */}
+      {/* Data processing nodes (centered) */}
+      <circle cx="100" cy="90" r="8" fill={colors.accentColor} filter="url(#neonGlow-sage)"/>
+      <circle cx="85" cy="105" r="6" fill={colors.secondaryColor} filter="url(#neonGlow-sage)"/>
+      <circle cx="115" cy="105" r="6" fill={colors.secondaryColor} filter="url(#neonGlow-sage)"/>
+      <circle cx="100" cy="120" r="5" fill={colors.baseColor} filter="url(#neonGlow-sage)"/>
+      {/* Logic circuit patterns (centered) */}
       <path 
-        d="M85 85 L100 70 L115 85 L100 100 L85 85" 
+        d="M85 105 L100 90 L115 105 L100 120 L85 105" 
         stroke={colors.baseColor} 
         strokeWidth="2" 
         fill="none" 
