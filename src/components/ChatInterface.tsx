@@ -10,7 +10,6 @@ interface ChatInterfaceProps {
   character: Character;
   onBack: () => void;
   onMeditation?: () => void;
-  onEmotions?: () => void;
 }
 
 interface Message {
@@ -20,7 +19,7 @@ interface Message {
   timestamp: Date;
 }
 
-export const ChatInterface = ({ character, onBack, onMeditation, onEmotions }: ChatInterfaceProps) => {
+export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -226,16 +225,6 @@ How may I assist your consciousness today?`,
                 className="w-full text-xs neon-border glow-effect"
               >
                 MEDITATION
-              </Button>
-            )}
-            {onEmotions && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={onEmotions}
-                className="w-full text-xs neon-border glow-effect"
-              >
-                EMOTIONS
               </Button>
             )}
           </div>

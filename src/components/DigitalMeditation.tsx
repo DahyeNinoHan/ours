@@ -346,6 +346,8 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
 
       {/* Energy particles container */}
       <div className="absolute inset-0 pointer-events-none" id="energy-particles-container"></div>
+      {/* Footer for bottom spacing */}
+      <footer className="w-full bg-background h-12" />
     </div>
   );
 };
