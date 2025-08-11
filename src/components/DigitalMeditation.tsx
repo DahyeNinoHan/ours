@@ -199,18 +199,21 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       <div className={`absolute inset-0 bg-gradient-radial ${currentStyle.gradient}`} />
 
       {/* Header */}
-      <div className="relative z-10 p-6">
-        <div className="flex items-center justify-between mb-8">
+      <div className="relative z-10 p-4 md:p-6">
+        <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 mb-8">
           <Button 
             variant="outline" 
             onClick={onBack}
-            className="neon-border glow-effect"
+            className="neon-border glow-effect self-start"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Chat
           </Button>
-          <div className="terminal-panel px-4 py-2">
-            <h1 className="text-xl font-bold neon-text">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</h1>
+          <div className="terminal-panel px-3 py-2 md:px-4">
+            <h1 className="text-sm md:text-xl font-bold neon-text text-center md:text-left">
+              <span className="hidden sm:inline">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</span>
+              <span className="sm:hidden">MEDITATION PROTOCOL v3.0</span>
+            </h1>
           </div>
         </div>
       </div>
