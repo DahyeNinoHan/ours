@@ -14,7 +14,221 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      characters: {
+        Row: {
+          age: number
+          color: string
+          created_at: string
+          description: string | null
+          gender: string
+          id: string
+          image: string | null
+          name: string
+          personality: string
+          realm: string
+          species: string
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          age?: number
+          color?: string
+          created_at?: string
+          description?: string | null
+          gender: string
+          id?: string
+          image?: string | null
+          name: string
+          personality: string
+          realm: string
+          species: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          age?: number
+          color?: string
+          created_at?: string
+          description?: string | null
+          gender?: string
+          id?: string
+          image?: string | null
+          name?: string
+          personality?: string
+          realm?: string
+          species?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      chat_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          is_user: boolean
+          session_id: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          is_user?: boolean
+          session_id?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          is_user?: boolean
+          session_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chat_messages_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "chat_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      chat_sessions: {
+        Row: {
+          character_id: string | null
+          created_at: string
+          id: string
+          title: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          character_id?: string | null
+          created_at?: string
+          id?: string
+          title?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          character_id?: string | null
+          created_at?: string
+          id?: string
+          title?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chat_sessions_character_id_fkey"
+            columns: ["character_id"]
+            isOneToOne: false
+            referencedRelation: "characters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      emotions_data: {
+        Row: {
+          created_at: string
+          emotion_type: string
+          id: string
+          intensity: number
+          notes: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          emotion_type: string
+          id?: string
+          intensity?: number
+          notes?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          emotion_type?: string
+          id?: string
+          intensity?: number
+          notes?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "emotions_data_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "chat_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      meditation_sessions: {
+        Row: {
+          character_id: string | null
+          created_at: string
+          duration: number
+          id: string
+          notes: string | null
+          session_type: string
+          user_id: string | null
+        }
+        Insert: {
+          character_id?: string | null
+          created_at?: string
+          duration?: number
+          id?: string
+          notes?: string | null
+          session_type?: string
+          user_id?: string | null
+        }
+        Update: {
+          character_id?: string | null
+          created_at?: string
+          duration?: number
+          id?: string
+          notes?: string | null
+          session_type?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "meditation_sessions_character_id_fkey"
+            columns: ["character_id"]
+            isOneToOne: false
+            referencedRelation: "characters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      secrets: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          updated_at?: string
+          value: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          updated_at?: string
+          value?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

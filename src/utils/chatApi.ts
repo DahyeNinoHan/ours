@@ -25,11 +25,12 @@ export async function callChatAPI(messages: Message[], selectedCharacter: Select
   try {
     console.log('Calling Supabase edge function with character:', selectedCharacter);
     
-    // Call Supabase edge function instead of Hugging Face directly
-    const response = await fetch('/functions/v1/chat', {
+    // Call Supabase edge function with correct URL
+    const response = await fetch('https://ghtpxrzvghondpvyxoit.supabase.co/functions/v1/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdodHB4cnp2Z2hvbmRwdnl4b2l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNDAyNzQsImV4cCI6MjA3MDYxNjI3NH0.6tIYuqWQKh-TgEFTUHe5_IMPuFlnqqTaElMpAZLybXc'
       },
       body: JSON.stringify({
         messages,
