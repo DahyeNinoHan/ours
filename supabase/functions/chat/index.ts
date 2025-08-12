@@ -29,20 +29,11 @@ serve(async (req) => {
   try {
     const { messages, selectedCharacter }: ChatRequest = await req.json()
 
-    // Get Hugging Face token from secrets
-    const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_ANON_KEY') ?? ''
-    )
+    // Get Hugging Face token from environment variable directly
+    const hfToken = Deno.env.get('HF_TOKEN');
 
-    const { data: secretData } = await supabaseClient
-      .from('secrets')
-      .select('value')
-      .eq('name', 'HF_TOKEN')
-      .single()
-
-    if (!secretData?.value) {
-      throw new Error('HF_TOKEN not found in secrets')
+    if (!hfToken) {
+      throw new Error('HF_TOKEN environment variable not set')
     }
 
     // Character database embedded in function
@@ -90,7 +81,7 @@ serve(async (req) => {
       "https://api.huggingface.co/models/Qwen/Qwen2.5-14B-Instruct/v1/chat/completions",
       {
         headers: {
-          Authorization: `Bearer ${secretData.value}`,
+          Authorization: `Bearer ${hfToken}`,
           "Content-Type": "application/json",
         },
         method: "POST",
