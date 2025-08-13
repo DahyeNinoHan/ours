@@ -76,9 +76,9 @@ serve(async (req) => {
       content: character.chatPersona
     }
 
-    // Call Hugging Face API
+    // Call Vercel Function API
     const response = await fetch(
-      "https://api.huggingface.co/models/Qwen/Qwen2.5-14B-Instruct/v1/chat/completions",
+      "https://my-vercel-project.vercel.app/api/chat",
       {
         headers: {
           Authorization: `Bearer ${hfToken}`,
