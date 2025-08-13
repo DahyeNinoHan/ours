@@ -29,13 +29,6 @@ serve(async (req) => {
   try {
     const { messages, selectedCharacter }: ChatRequest = await req.json()
 
-    // Get Hugging Face token from environment variable directly
-    const hfToken = Deno.env.get('HF_TOKEN');
-
-    if (!hfToken) {
-      throw new Error('HF_TOKEN environment variable not set')
-    }
-
     // Character database embedded in function
     const charactersData = {
       "characters": [
@@ -81,7 +74,6 @@ serve(async (req) => {
       "https://my-vercel-project.vercel.app/api/chat",
       {
         headers: {
-          Authorization: `Bearer ${hfToken}`,
           "Content-Type": "application/json",
         },
         method: "POST",
@@ -96,7 +88,7 @@ serve(async (req) => {
     )
 
     if (!response.ok) {
-      throw new Error(`Hugging Face API error: ${response.status}`)
+      throw new Error(`Vercel API error: ${response.status}`)
     }
 
     const data = await response.json()
