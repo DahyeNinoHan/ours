@@ -167,19 +167,19 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <div className="flex justify-between items-center mb-2">
                   <label className="text-sm font-medium">Age (Digital Years):</label>
-                  <span className="text-accent font-bold">{character.age}</span>
+                  <span className="text-accent font-bold">{character.age}B</span>
                 </div>
                   <Slider
                     value={[character.age]}
                     onValueChange={(value) => handleSliderChange('age', value)}
-                    max={6789}
-                    min={-537}
-                    step={50}
+                    max={42.73}
+                    min={-40.28}
+                    step={0.01}
                     className="w-full"
                     thumbGlow
                   />
                 <div className="text-xs text-muted-foreground mt-1">
-                  Selected: {character.age} years old
+                  Selected: {character.age} Billion years old
                 </div>
               </div>
 
