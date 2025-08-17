@@ -43,6 +43,7 @@ const Index = () => {
           src="/ours_logo_02.svg"
           alt="Ours Logo"
           style={{ maxWidth: "60vw", maxHeight: "60vh" }}
+          draggable={false}
         />
       </div>
     );
