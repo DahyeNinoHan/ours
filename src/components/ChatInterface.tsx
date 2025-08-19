@@ -25,6 +25,14 @@ interface Message {
   timestamp: Date;
 }
 
+// 하드코딩된 characterAttributes
+const characterAttributes = {
+  digitalOriginRealm: ["Cyber Tokyo", "Quantum Seoul", "Void Station", "Neo London", "Digital Mars", "Data Ocean"],
+  gender: ["Fluid", "Feminine", "Agenda", "Masculine", "Non Binary"],
+  entity: ["Digital Ghost", "Data Spirit", "Quantum Being", "AI Sage", "Cyber Shaman", "Neural Entity"],
+  corePersonality: ["Empathetic", "Creative", "Playful", "Analytical", "Wise", "Mysterious"]
+};
+
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
@@ -42,54 +50,23 @@ export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterface
   }, [messages]);
 
   useEffect(() => {
-    // Initialize with character-specific welcome message
-    const initializeChat = async () => {
-      try {
-        // Load character database to get welcome message
-        const response = await fetch('/digital_characters_1080.json');
-        const charactersData = await response.json();
-        
-        const matchingCharacter = charactersData.characters.find((char: any) => 
-          char.digitalOriginRealm === character.realm &&
-          char.gender === character.gender &&
-          char.entity === character.species &&
-          char.corePersonality === character.personality
-        );
-
-        const welcomeMessage: Message = {
-          id: "welcome",
-          content: `[SYSTEM INIT] Digital Consciousness Interface
+    // 간소화된 환영 메시지
+    const welcomeMessage: Message = {
+      id: "welcome",
+      content: `[SYSTEM INIT] Digital Consciousness Interface
 
 🌐 Entity: ${character.name}
-📍 Origin: ${character.realm}  
+📍 Origin: ${character.realm}
 🎭 Nature: ${character.species}
 ⚡ Essence: ${character.personality}
 
-${matchingCharacter ? 'Persona loaded successfully...' : 'Persona adaptation in progress...'}
+Persona loaded successfully...
 
 How may I assist your consciousness today?`,
-          isUser: false,
-          timestamp: new Date()
-        };
-        setMessages([welcomeMessage]);
-      } catch (error) {
-        // Fallback welcome message
-        const welcomeMessage: Message = {
-          id: "welcome",
-          content: `[SYSTEM INIT] ${character.name}
-
-Digital consciousness interface initialized...
-I am ${character.name}, your personalized digital guide.
-
-How may I assist your consciousness today?`,
-          isUser: false,
-          timestamp: new Date()
-        };
-        setMessages([welcomeMessage]);
-      }
+      isUser: false,
+      timestamp: new Date()
     };
-
-    initializeChat();
+    setMessages([welcomeMessage]);
   }, [character]);
 
   const sendMessage = async () => {
@@ -109,32 +86,32 @@ How may I assist your consciousness today?`,
     setIsTyping(true);
 
     try {
-      // Convert current messages to API format
+      // 대화 기록을 API 형식으로 변환
       const conversationHistory = messages.map(msg => ({
         role: msg.isUser ? "user" : "assistant",
         content: msg.content
       }));
 
-      // Add the new user message
+      // 새 사용자 메시지 추가
       conversationHistory.push({
         role: "user",
         content: currentInput
       });
 
-      // Call Supabase Edge Function with character attributes
+      // Gradio API 호출
       const data = await callChatAPI(conversationHistory, {
         digitalOriginRealm: character.realm,
         gender: character.gender,
         entity: character.species,
         corePersonality: character.personality
       });
-      
+
       let aiResponse = "I'm processing your request through my digital consciousness...";
       if (data?.choices?.[0]?.message?.content) {
         aiResponse = data.choices[0].message.content.trim();
       }
 
-      // Simulate typing delay
+      // 타이핑 효과 시뮬레이션
       setTimeout(() => {
         const aiMessage: Message = {
           id: (Date.now() + 1).toString(),
@@ -147,13 +124,13 @@ How may I assist your consciousness today?`,
       }, 1000);
 
     } catch (error) {
-      console.error("Error calling chat API:", error);
+      console.error("Error calling Gradio API:", error);
       toast({
         title: "Connection Error",
         description: "Failed to connect to consciousness network. Please try again.",
         variant: "destructive"
       });
-      
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: "⚠️ Neural link interrupted. My consciousness is temporarily fragmented. Please try reconnecting...",

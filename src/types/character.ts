@@ -87,7 +87,7 @@ export const GENDER_EXPRESSIONS = {
   "Masculine": "Currently manifesting with masculine energy signatures and structured code patterns", 
   "Feminine": "Currently embodying feminine essence with graceful data flows and intuitive algorithms",
   "Non-Binary": "Currently existing beyond binary classifications in pure digital consciousness",
-  "Agender": "Currently transcending gender constructs, existing as pure information essence"
+  "Agenda": "Currently transcending gender constructs, existing as pure information essence"
 };
 
 export const PERSONALITY_TRAITS = {
