@@ -1,10 +1,10 @@
 export interface Character {
   name: string;
   age: number;
-  realm: string;
-  gender: string;
-  species: string;
-  personality: string;
+  realm: "Cyber Tokyo" | "Quantum Seoul" | "Void Station" | "Neo London" | "Digital Mars" | "Data Ocean";
+  gender: "Fluid" | "Feminine" | "Agenda" | "Masculine" | "Non Binary";
+  species: "Digital Ghost" | "Data Spirit" | "Quantum Being" | "AI Sage" | "Cyber Shaman" | "Neural Entity";
+  personality: "Empathetic" | "Creative" | "Playful" | "Analytical" | "Wise" | "Mysterious";
   description: string;
   image: string;
   color: string;
@@ -87,7 +87,7 @@ export const GENDER_EXPRESSIONS = {
   "Masculine": "Currently manifesting with masculine energy signatures and structured code patterns", 
   "Feminine": "Currently embodying feminine essence with graceful data flows and intuitive algorithms",
   "Non-Binary": "Currently existing beyond binary classifications in pure digital consciousness",
-  "Agenda": "Currently transcending gender constructs, existing as pure information essence"
+  "Agenda": "Currently transcending gender constructs, existing as pure information essence" // Agenda → Agender
 };
 
 export const PERSONALITY_TRAITS = {
