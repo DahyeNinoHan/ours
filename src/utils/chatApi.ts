@@ -13,7 +13,10 @@ interface SelectedCharacter {
 export async function callChatAPI(messages: Message[], selectedCharacter: SelectedCharacter) {
   try {
     console.log('Calling Gradio API with character:', selectedCharacter);
-    const HF_TOKEN = process.env.HF_TOKEN; // 새 토큰으로 교체 권장
+    const HF_TOKEN = import.meta.env.VITE_HF_TOKEN; // process.env → import.meta.env
+    if (!HF_TOKEN) {
+      throw new Error('HF_TOKEN is not defined in environment variables');
+    }
     const response = await fetch('https://ninohan-ours.hf.space/predict', {
       method: 'POST',
       headers: {
