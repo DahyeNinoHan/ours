@@ -10,47 +10,36 @@ interface SelectedCharacter {
   corePersonality: string;
 }
 
-// Load character database
-async function loadCharacterDatabase() {
-  try {
-    const response = await fetch('/digital_characters_1080.json');
-    return await response.json();
-  } catch (error) {
-    console.error('Error loading character database:', error);
-    return null;
-  }
-}
-
 export async function callChatAPI(messages: Message[], selectedCharacter: SelectedCharacter) {
   try {
-    console.log('Calling Supabase edge function with character:', selectedCharacter);
-    
-    // Call Supabase edge function with correct URL
-    const response = await fetch('https://ghtpxrzvghondpvyxoit.supabase.co/functions/v1/chat', {
+    console.log('Calling Gradio API with character:', selectedCharacter);
+    const HF_TOKEN = process.env.HF_TOKEN; // 새 토큰으로 교체 권장
+    const response = await fetch('https://ninohan-ours.hf.space/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdodHB4cnp2Z2hvbmRwdnl4b2l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNDAyNzQsImV4cCI6MjA3MDYxNjI3NH0.6tIYuqWQKh-TgEFTUHe5_IMPuFlnqqTaElMpAZLybXc'
+        'Authorization': `Bearer ${HF_TOKEN}`
       },
       body: JSON.stringify({
-        messages,
-        selectedCharacter
+        data: [messages, selectedCharacter]
       })
     });
 
     if (!response.ok) {
-      throw new Error(`Chat API error: ${response.status}`);
+      throw new Error(`Gradio API error: ${response.status}`);
     }
 
     const data = await response.json();
     console.log('Received response:', data);
-    
-    return data;
-
+    return {
+      choices: [{
+        message: {
+          content: data.data[0].choices[0].message.content
+        }
+      }]
+    };
   } catch (error) {
-    console.error('Error calling chat API:', error);
-    
-    // Fallback response with character persona
+    console.error('Error calling Gradio API:', error);
     return {
       choices: [{
         message: {
