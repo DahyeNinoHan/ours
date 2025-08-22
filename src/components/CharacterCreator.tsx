@@ -17,7 +17,7 @@ interface CharacterCreatorProps {
 export const CharacterCreator = ({ onComplete }: CharacterCreatorProps) => {
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
-    age: 1850,
+    age: 42.73,
     realm: "Cyber Tokyo",
     gender: "Fluid",
     species: "Digital Ghost", 
@@ -154,7 +154,13 @@ Initialized with love in JavaScript ❤️`;
               onClick={initializeConsciousness}
               className="w-full mt-6 bg-accent hover:bg-accent/80 text-accent-foreground font-bold py-3 glow-effect"
             >
-              INITIALIZE CONSCIOUSNESS
+              CHAT
+            </Button>
+            <Button
+              onClick={() => { window.location.href = '/meditation'; }}
+              className="w-full mt-2 bg-primary hover:bg-primary/80 text-primary-foreground font-bold py-3 glow-effect"
+            >
+              MEDITATION
             </Button>
           </Card>
 
