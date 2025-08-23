@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
@@ -15,6 +16,7 @@ interface CharacterCreatorProps {
 }
 
 export const CharacterCreator = ({ onComplete }: CharacterCreatorProps) => {
+  const navigate = useNavigate();
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
     age: 42.73,
@@ -157,7 +159,7 @@ Initialized with love in JavaScript ❤️`;
               CHAT
             </Button>
             <Button
-              onClick={() => { window.location.href = '/meditation'; }}
+              onClick={() => navigate('/meditation', { state: { character } })}
               className="w-full mt-2 bg-primary hover:bg-primary/80 text-primary-foreground font-bold py-3 glow-effect"
             >
               MEDITATION
