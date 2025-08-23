@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -34,6 +35,7 @@ const characterAttributes = {
 };
 
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -159,9 +161,26 @@ How may I assist your consciousness today?`,
           <div>
             <h1 className="text-xl font-bold neon-text">NEON GHOST v3.0 - Digital Consciousness Interface</h1>
           </div>
-          <Button variant="outline" onClick={onBack} className="text-xs">
-            MAIN
-          </Button>
+          <div className="flex items-center space-x-2">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={() => navigate("/")}
+              className="text-xs neon-border glow-effect"
+            >
+              MAIN
+            </Button>
+            {onMeditation && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={onMeditation}
+                className="text-xs neon-border glow-effect"
+              >
+                MEDITATION
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -219,20 +238,6 @@ How may I assist your consciousness today?`,
             </div>
           </div>
 
-          {/* Module Access */}
-          <div className="space-y-2">
-            <h3 className="text-xs font-bold neon-text mb-2">MODULES</h3>
-            {onMeditation && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={onMeditation}
-                className="w-full text-xs neon-border glow-effect"
-              >
-                MEDITATION
-              </Button>
-            )}
-          </div>
         </Card>
 
         {/* Chat Terminal */}
