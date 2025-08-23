@@ -284,10 +284,10 @@ Initialized with love in JavaScript ❤️`;
                 <Button
                   variant="outline"
                   onClick={() => {
-                    const realms = Object.keys(DIGITAL_REALMS) as Array<keyof typeof DIGITAL_REALMS>;
-                    const species = Object.keys(ENTITY_SPECIES) as Array<keyof typeof ENTITY_SPECIES>;
-                    const genders = Object.keys(GENDER_EXPRESSIONS) as Array<keyof typeof GENDER_EXPRESSIONS>;
-                    const personalities = Object.keys(PERSONALITY_TRAITS) as Array<keyof typeof PERSONALITY_TRAITS>;
+                    const realms = Object.keys(DIGITAL_REALMS);
+                    const species = Object.keys(ENTITY_SPECIES);
+                    const genders = Object.keys(GENDER_EXPRESSIONS);
+                    const personalities = Object.keys(PERSONALITY_TRAITS);
                     
                     setCharacter(prev => ({
                       ...prev,

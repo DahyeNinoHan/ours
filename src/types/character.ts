@@ -2,7 +2,7 @@ export interface Character {
   name: string;
   age: number;
   realm: "Cyber Tokyo" | "Quantum Seoul" | "Void Station" | "Neo London" | "Digital Mars" | "Data Ocean";
-  gender: "Fluid" | "Feminine" | "Agenda" | "Masculine" | "Non-Binary";
+  gender: "Fluid" | "Feminine" | "Agenda" | "Masculine" | "Non Binary";
   species: "Digital Ghost" | "Data Spirit" | "Quantum Being" | "AI Sage" | "Cyber Shaman" | "Neural Entity";
   personality: "Empathetic" | "Creative" | "Playful" | "Analytical" | "Wise" | "Mysterious";
   description: string;
