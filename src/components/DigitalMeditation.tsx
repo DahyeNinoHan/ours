@@ -214,12 +214,6 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
               <span className="hidden sm:inline">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</span>
               <span className="sm:hidden">MEDITATION PROTOCOL v3.0</span>
             </h1>
-          <Button
-            onClick={() => { window.location.href = '/meditation'; }}
-            className="w-full mt-2 bg-primary hover:bg-primary/80 text-primary-foreground font-bold py-3 glow-effect"
-          >
-            MEDITATION
-          </Button>
           </div>
         </div>
       </div>

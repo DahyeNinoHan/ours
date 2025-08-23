@@ -28,7 +28,7 @@ interface Message {
 // 하드코딩된 characterAttributes
 const characterAttributes = {
   digitalOriginRealm: ["Cyber Tokyo", "Quantum Seoul", "Void Station", "Neo London", "Digital Mars", "Data Ocean"],
-  gender: ["Fluid", "Feminine", "Agenda", "Masculine", "Non Binary"],
+  gender: ["Fluid", "Feminine", "Agenda", "Masculine", "Non-Binary"],
   entity: ["Digital Ghost", "Data Spirit", "Quantum Being", "AI Sage", "Cyber Shaman", "Neural Entity"],
   corePersonality: ["Empathetic", "Creative", "Playful", "Analytical", "Wise", "Mysterious"]
 };
