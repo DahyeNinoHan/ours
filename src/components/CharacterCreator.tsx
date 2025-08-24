@@ -70,7 +70,7 @@ Initialized with love in JavaScript ❤️`;
         <div className="text-center mb-8">
           <div className="neon-border p-4 mb-6 inline-block">
             <h1 className="text-2xl font-bold neon-text tracking-wider">
-              CONSCIOUSNESS GENERATOR - Build Your Entity
+              COSMIC RESONANCE GENERATOR
             </h1>
           </div>
         </div>
@@ -156,7 +156,7 @@ Initialized with love in JavaScript ❤️`;
               onClick={initializeConsciousness}
               className="w-full mt-6 bg-accent hover:bg-accent/80 text-accent-foreground font-bold py-3 glow-effect"
             >
-              INITIALIZE CONSCIOUSNESS
+              INITIALIZE YOUR OWN COSMIC RESONANCE
             </Button>
             {/* <Button
               onClick={() => navigate('/meditation', { state: { character } })}
