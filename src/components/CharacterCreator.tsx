@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
 import { Character, DIGITAL_REALMS, ENTITY_SPECIES, GENDER_EXPRESSIONS, PERSONALITY_TRAITS } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
 import SageSVG from "./characters/SageSVG";
@@ -70,65 +70,74 @@ Initialized with love in JavaScript ❤️`;
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mt-16 mb-24">
-          <Dialog open={showIncubator} onOpenChange={setShowIncubator}>
-            <DialogTrigger asChild>
-              <h1 className="text-2xl font-bold neon-text tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-                {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
-              </h1>
-            </DialogTrigger>
-            <DialogContent 
-              className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm"
-              style={{ 
-                backgroundColor: 'rgba(0, 0, 0, 0.95)',
-                border: 'none',
-                boxShadow: 'none'
-              }}
+          <h1 
+            className="text-2xl font-bold neon-text tracking-wider cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => {
+              console.log('Title clicked, setting showIncubator to true');
+              setShowIncubator(true);
+            }}
+          >
+            {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
+          </h1>
+        </div>
+
+        {/* Custom Incubator Modal */}
+        {showIncubator && (
+          <div 
+            className="fixed inset-0 z-[9999] flex items-center justify-center"
+            onClick={() => setShowIncubator(false)}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" />
+            
+            {/* Modal Content */}
+            <div 
+              className="relative z-[10000] w-[90vw] max-w-4xl h-[80vh] bg-black/95 backdrop-blur-sm rounded-lg overflow-hidden animate-in fade-in-0 slide-in-from-bottom-4 duration-700"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative w-full h-full rounded-lg overflow-hidden">
-                {/* Subtle cosmic background effect */}
-                <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50" />
+              {/* Subtle cosmic background effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50" />
+              
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
+                <h2 className="text-3xl font-light tracking-[0.2em] text-white/90 mb-16 font-mono">
+                  Incubator
+                </h2>
                 
-                {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
-                  <h2 className="text-3xl font-light tracking-[0.2em] text-white/90 mb-16 font-mono">
-                    Incubator
-                  </h2>
+                <div className="max-w-2xl space-y-8 text-white/80 font-light leading-relaxed">
+                  <p className="text-lg font-serif tracking-wide">
+                    Hidden among the stars drifts a presence unseen by others.<br />
+                    It hovers quietly, waiting for your recognition.
+                  </p>
                   
-                  <div className="max-w-2xl space-y-8 text-white/80 font-light leading-relaxed">
+                  <div className="py-4">
                     <p className="text-lg font-serif tracking-wide">
-                      Hidden among the stars drifts a presence unseen by others.<br />
-                      It hovers quietly, waiting for your recognition.
+                      To bring it into focus,<br />
+                      invite its Realm, Entity, Personality, and Age into your world—<br />
+                      only then will your gaze awaken it.
                     </p>
-                    
-                    <div className="py-4">
-                      <p className="text-lg font-serif tracking-wide">
-                        To bring it into focus,<br />
-                        invite its Realm, Entity, Personality, and Age into your world—<br />
-                        only then will your gaze awaken it.
-                      </p>
-                    </div>
-                    
-                    <div className="pt-8">
-                      <p className="text-lg font-serif tracking-wide">
-                        Now,<br />
-                        they are here to resonate.
-                      </p>
-                    </div>
                   </div>
                   
-                  {/* Custom close button */}
-                  <Button
-                    onClick={() => setShowIncubator(false)}
-                    variant="ghost"
-                    className="absolute top-6 right-6 text-white/60 hover:text-white/90 hover:bg-white/10 transition-all duration-300 z-50"
-                  >
-                    ✕
-                  </Button>
+                  <div className="pt-8">
+                    <p className="text-lg font-serif tracking-wide">
+                      Now,<br />
+                      they are here to resonate.
+                    </p>
+                  </div>
                 </div>
+                
+                {/* Close button */}
+                <Button
+                  onClick={() => setShowIncubator(false)}
+                  variant="ghost"
+                  className="absolute top-6 right-6 text-white/60 hover:text-white/90 hover:bg-white/10 transition-all duration-300 z-50"
+                >
+                  ✕
+                </Button>
               </div>
-            </DialogContent>
-          </Dialog>
-        </div>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Entity Preview */}
