@@ -18,7 +18,7 @@ interface CharacterCreatorProps {
 
 export const CharacterCreator = ({ onComplete }: CharacterCreatorProps) => {
   const navigate = useNavigate();
-  const [showIncubator, setShowIncubator] = useState(false);
+  const [showIncubator, setShowIncubator] = useState(true);
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
     age: 42.73,
@@ -71,11 +71,6 @@ Initialized with love in JavaScript ❤️`;
         {/* Header */}
         <div className="text-center mt-16 mb-24">
           <Dialog open={showIncubator} onOpenChange={setShowIncubator}>
-            <DialogTrigger asChild>
-              <h1 className="text-2xl font-bold neon-text tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-                {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
-              </h1>
-            </DialogTrigger>
             <DialogContent 
               className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm"
               style={{ 
@@ -128,6 +123,9 @@ Initialized with love in JavaScript ❤️`;
               </div>
             </DialogContent>
           </Dialog>
+          <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
+            {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
