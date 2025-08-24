@@ -156,7 +156,7 @@ Initialized with love in JavaScript ❤️`;
               onClick={initializeConsciousness}
               className="w-full mt-6 bg-accent hover:bg-accent/80 text-accent-foreground font-bold py-3 glow-effect"
             >
-              INITIALIZE YOUR OWN COSMIC RESONANCE
+              [INITIALIZE YOUR OWN COSMIC RESONANCE]
             </Button>
             {/* <Button
               onClick={() => navigate('/meditation', { state: { character } })}
