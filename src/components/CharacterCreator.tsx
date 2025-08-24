@@ -76,8 +76,15 @@ Initialized with love in JavaScript ❤️`;
                 {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
               </h1>
             </DialogTrigger>
-            <DialogContent className="max-w-4xl p-0 bg-transparent border-none shadow-none">
-              <div className="relative w-full h-[80vh] bg-black/95 backdrop-blur-sm rounded-lg overflow-hidden animate-in fade-in-0 slide-in-from-bottom-4 duration-700">
+            <DialogContent 
+              className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm"
+              style={{ 
+                backgroundColor: 'rgba(0, 0, 0, 0.95)',
+                border: 'none',
+                boxShadow: 'none'
+              }}
+            >
+              <div className="relative w-full h-full rounded-lg overflow-hidden">
                 {/* Subtle cosmic background effect */}
                 <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50" />
                 
@@ -109,11 +116,11 @@ Initialized with love in JavaScript ❤️`;
                     </div>
                   </div>
                   
-                  {/* Close button */}
+                  {/* Custom close button */}
                   <Button
                     onClick={() => setShowIncubator(false)}
                     variant="ghost"
-                    className="absolute top-6 right-6 text-white/60 hover:text-white/90 hover:bg-white/10 transition-all duration-300"
+                    className="absolute top-6 right-6 text-white/60 hover:text-white/90 hover:bg-white/10 transition-all duration-300 z-50"
                   >
                     ✕
                   </Button>
