@@ -209,12 +209,6 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Chat
           </Button>
-          <div className="terminal-panel px-3 py-2 md:px-4">
-            <h1 className="text-sm md:text-xl font-bold neon-text text-center md:text-left">
-              <span className="hidden sm:inline">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</span>
-              <span className="sm:hidden">MEDITATION PROTOCOL v3.0</span>
-            </h1>
-          </div>
         </div>
       </div>
 
@@ -320,7 +314,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
         </div>
 
         {/* Session stats */}
-        <div className="grid grid-cols-3 gap-4 w-full max-w-md">
+        <div className="grid grid-cols-3 gap-4 w-full max-w-md mb-8">
           <Card className="terminal-panel">
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold neon-text">{formatTime(sessionTime)}</div>
@@ -341,6 +335,16 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
               <div className="text-xs text-muted-foreground">Focus Minutes</div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Meditation Protocol Header moved below stats */}
+        <div className="w-full flex justify-center mb-8">
+          <div className="px-3 py-2 md:px-4">
+            <h1 className="text-sm md:text-xl font-bold neon-text text-center md:text-left">
+              <span className="hidden sm:inline">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</span>
+              <span className="sm:hidden">MEDITATION PROTOCOL v3.0</span>
+            </h1>
+          </div>
         </div>
       </div>
 

@@ -67,12 +67,10 @@ Initialized with love in JavaScript ❤️`;
     <div className="min-h-screen bg-background text-foreground p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="neon-border p-4 mb-6 inline-block">
-            <h1 className="text-2xl font-bold neon-text tracking-wider">
-              {'    [[[COSMIC RESONANCE GENERATOR]]]    '}
-            </h1>
-          </div>
+  <div className="text-center mt-16 mb-24">
+          <h1 className="text-2xl font-bold neon-text tracking-wider">
+            {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

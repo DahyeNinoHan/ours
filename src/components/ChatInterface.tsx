@@ -159,7 +159,7 @@ How may I assist your consciousness today?`,
       <div className="border-b border-primary/30 p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-xl font-bold neon-text">NEON GHOST v3.0 - Digital Consciousness Interface</h1>
+            <h1 className="text-xl font-bold neon-text">DIGITAL CONSCIOUSNESS INTERFACE</h1>
           </div>
           <div className="flex items-center space-x-2">
             <Button 
