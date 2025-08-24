@@ -70,7 +70,7 @@ Initialized with love in JavaScript ❤️`;
         <div className="text-center mb-8">
           <div className="neon-border p-4 mb-6 inline-block">
             <h1 className="text-2xl font-bold neon-text tracking-wider">
-              NEON GHOST CONSCIOUSNESS GENERATOR v3.0 - Build Your Entity
+              CONSCIOUSNESS GENERATOR - Build Your Entity
             </h1>
           </div>
         </div>
@@ -156,14 +156,14 @@ Initialized with love in JavaScript ❤️`;
               onClick={initializeConsciousness}
               className="w-full mt-6 bg-accent hover:bg-accent/80 text-accent-foreground font-bold py-3 glow-effect"
             >
-              CHAT
+              INITIALIZE CONSCIOUSNESS
             </Button>
-            <Button
+            {/* <Button
               onClick={() => navigate('/meditation', { state: { character } })}
               className="w-full mt-2 bg-primary hover:bg-primary/80 text-primary-foreground font-bold py-3 glow-effect"
             >
               MEDITATION
-            </Button>
+            </Button> */}
           </Card>
 
           {/* Configuration Matrix */}
