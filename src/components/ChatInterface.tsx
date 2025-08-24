@@ -272,7 +272,7 @@ How may I assist your consciousness today?`,
                     <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
                     <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
                   </div>
-                  <span className="text-muted-foreground text-xs">NEON GHOST is processing...</span>
+                  <span className="text-muted-foreground text-xs">{character.species} is processing...</span>
                 </div>
               </div>
             )}
