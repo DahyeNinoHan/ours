@@ -198,7 +198,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       {/* Background gradient */}
       <div className={`absolute inset-0 bg-gradient-radial ${currentStyle.gradient}`} />
 
-      {/* Header */}
+      {/* Header + Session stats row */}
       <div className="relative z-10 p-4 md:p-6">
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 mb-8">
           <Button 
@@ -209,18 +209,41 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Chat
           </Button>
+          {/* Session stats - now in header row */}
+          <div className="grid grid-cols-3 gap-4 w-full max-w-md">
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
+                <div className="text-2xl font-bold neon-text">{formatTime(sessionTime)}</div>
+                <div className="text-xs text-muted-foreground">Session Time</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
+                <div className="text-2xl font-bold neon-text">{completedCycles}</div>
+                <div className="text-xs text-muted-foreground">Breathing Cycles</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
+                <div className="text-2xl font-bold neon-text">
+                  {Math.round((completedCycles * 19) / 60 * 10) / 10}
+                </div>
+                <div className="text-xs text-muted-foreground">Focus Minutes</div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
 
       {/* Main meditation interface */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-6">
         {/* Enhanced meditation circle */}
-        <div className="relative mb-8">
+  <div className="relative mb-28">
           <div 
             className={`meditation-visual transition-all duration-${BREATHING_PHASES[currentPhase].duration} ease-in-out ${getCircleScale()}`}
             style={{
-              width: '320px',
-              height: '320px'
+              width: '560px',
+              height: '560px'
             }}
           >
             {/* Multi-layer breathing circles */}
@@ -274,8 +297,8 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           </div>
         </div>
 
-        {/* Character guidance message */}
-        <div className="terminal-panel p-4 mb-8 max-w-lg text-center">
+  {/* Character guidance message */}
+  <div className="p-4 mb-8 max-w-lg text-center bg-transparent border-none shadow-none">
           <p className="text-primary/80 text-sm mb-2">
             {character.name} guides you:
           </p>
@@ -313,29 +336,6 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           </Button>
         </div>
 
-        {/* Session stats */}
-        <div className="grid grid-cols-3 gap-4 w-full max-w-md mb-8">
-          <Card className="terminal-panel">
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold neon-text">{formatTime(sessionTime)}</div>
-              <div className="text-xs text-muted-foreground">Session Time</div>
-            </CardContent>
-          </Card>
-          <Card className="terminal-panel">
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold neon-text">{completedCycles}</div>
-              <div className="text-xs text-muted-foreground">Breathing Cycles</div>
-            </CardContent>
-          </Card>
-          <Card className="terminal-panel">
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold neon-text">
-                {Math.round((completedCycles * 19) / 60 * 10) / 10}
-              </div>
-              <div className="text-xs text-muted-foreground">Focus Minutes</div>
-            </CardContent>
-          </Card>
-        </div>
 
         {/* Meditation Protocol Header moved below stats */}
         <div className="w-full flex justify-center mb-8">
