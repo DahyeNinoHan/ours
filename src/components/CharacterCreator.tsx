@@ -69,7 +69,7 @@ Initialized with love in JavaScript ❤️`;
         {/* Header */}
         <div className="text-center mt-16 mb-24">
           <Dialog open={showIncubator} onOpenChange={setShowIncubator}>
-            <DialogContent className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm" style={{
+            <DialogContent className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm [&>button]:hidden" style={{
             backgroundColor: 'rgba(0, 0, 0, 0.95)',
             border: 'none',
             boxShadow: 'none'
