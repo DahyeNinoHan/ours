@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Character, DIGITAL_REALMS, ENTITY_SPECIES, GENDER_EXPRESSIONS, PERSONALITY_TRAITS } from "@/types/character";
+import { Character, DIGITAL_REALMS, ENTITY_SPECIES, PERSONALITY_TRAITS } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
 import SageSVG from "./characters/SageSVG";
 import SpiritSVG from "./characters/SpiritSVG";
@@ -23,7 +23,6 @@ export const CharacterCreator = ({
     name: "QUANTUM ENTITY",
     age: 42.73,
     realm: "Cyber Tokyo",
-    gender: "Fluid",
     species: "Digital Ghost",
     personality: "Empathetic",
     description: "",
@@ -34,9 +33,9 @@ export const CharacterCreator = ({
     const ageCategory = character.age < 1000 ? "young" : character.age < 3000 ? "mature" : "ancient";
     const realm = DIGITAL_REALMS[character.realm as keyof typeof DIGITAL_REALMS];
     const species = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
-    const genderExpr = GENDER_EXPRESSIONS[character.gender as keyof typeof GENDER_EXPRESSIONS];
     const personality = PERSONALITY_TRAITS[character.personality as keyof typeof PERSONALITY_TRAITS];
-    return `A sprightly ${character.age}-cycle-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${genderExpr}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
+    
+    return `A sprightly ${character.age}-cycle-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
 
 Initialized with love in JavaScript ❤️`;
   };
@@ -48,7 +47,7 @@ Initialized with love in JavaScript ❤️`;
       description,
       color: species.color
     }));
-  }, [character.age, character.realm, character.gender, character.species, character.personality]);
+  }, [character.age, character.realm, character.species, character.personality]);
   const handleSliderChange = (field: string, value: number[]) => {
     setCharacter(prev => ({
       ...prev,
@@ -227,15 +226,6 @@ Initialized with love in JavaScript ❤️`;
                 </div>
               </div>
 
-              {/* Gender Expression */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Gender Expression:</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(GENDER_EXPRESSIONS).map(gender => <Button key={gender} variant={character.gender === gender ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('gender', gender)} className="text-xs h-8">
-                      {gender}
-                    </Button>)}
-                </div>
-              </div>
 
               {/* Entity Species
                <div>
@@ -270,13 +260,11 @@ Initialized with love in JavaScript ❤️`;
                 <Button variant="outline" onClick={() => {
                 const realms = Object.keys(DIGITAL_REALMS) as (keyof typeof DIGITAL_REALMS)[];
                 const species = Object.keys(ENTITY_SPECIES) as (keyof typeof ENTITY_SPECIES)[];
-                const genders = Object.keys(GENDER_EXPRESSIONS) as (keyof typeof GENDER_EXPRESSIONS)[];
                 const personalities = Object.keys(PERSONALITY_TRAITS) as (keyof typeof PERSONALITY_TRAITS)[];
                 setCharacter(prev => ({
                   ...prev,
                   age: Math.floor(Math.random() * 6689) + 100,
                   realm: realms[Math.floor(Math.random() * realms.length)],
-                  gender: genders[Math.floor(Math.random() * genders.length)],
                   species: species[Math.floor(Math.random() * species.length)],
                   personality: personalities[Math.floor(Math.random() * personalities.length)]
                 }));

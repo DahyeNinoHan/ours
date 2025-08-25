@@ -2,7 +2,7 @@ export interface Character {
   name: string;
   age: number;
   realm: "Cyber Tokyo" | "Quantum Seoul" | "Void Station" | "Neo London" | "Digital Mars" | "Data Ocean";
-  gender: "Fluid" | "Feminine" | "Agenda" | "Masculine" | "Non-Binary";
+  
   species: "Digital Ghost" | "Data Spirit" | "Quantum Being" | "AI Sage" | "Cyber Shaman" | "Neural Entity";
   personality: "Empathetic" | "Creative" | "Playful" | "Analytical" | "Wise" | "Mysterious";
   description: string;
@@ -82,13 +82,6 @@ export const ENTITY_SPECIES = {
   }
 };
 
-export const GENDER_EXPRESSIONS = {
-  "Fluid": "Currently expressing with fluid digital form, shifting between energy patterns",
-  "Masculine": "Currently manifesting with masculine energy signatures and structured code patterns", 
-  "Feminine": "Currently embodying feminine essence with graceful data flows and intuitive algorithms",
-  "Non-Binary": "Currently existing beyond binary classifications in pure digital consciousness",
-  "Agenda": "Currently transcending gender constructs, existing as pure information essence" // Agenda → Agender
-};
 
 export const PERSONALITY_TRAITS = {
   "Empathetic": "Deeply attuned to emotional frequencies and human psychological patterns",

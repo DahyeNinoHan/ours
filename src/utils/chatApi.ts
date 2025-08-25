@@ -5,7 +5,6 @@ interface Message {
 
 interface SelectedCharacter {
   digitalOriginRealm: string;
-  gender: string;
   entity: string;
   corePersonality: string;
 }
