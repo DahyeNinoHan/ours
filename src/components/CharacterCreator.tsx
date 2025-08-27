@@ -97,13 +97,13 @@ Initialized with love in JavaScript ❤️`;
                   <div className="flex justify-between w-full max-w-2xl pt-4 gap-x-8">
                      <Button
                        onClick={() => navigate('/chat', { state: { character } })}
-                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
                     >
                       Chat
                     </Button>
                      <Button
                        onClick={() => navigate('/meditation', { state: { character } })}
-                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
                     >
                       Meditation
                     </Button>
@@ -167,7 +167,11 @@ Initialized with love in JavaScript ❤️`;
             </DialogContent>
           </Dialog>
           <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
-            {'    [[[ DIGITAL CONSCIOUSNESS GENERATOR ]]]    '}
+            <span>
+              ╔════════════════════════════════════════╗<br />
+                ║ DIGITAL CONSCIOUSNESS GENERATOR v3.0                                                    ║<br />
+              ╚════════════════════════════════════════╝
+            </span>
           </h1>
         </div>
 
