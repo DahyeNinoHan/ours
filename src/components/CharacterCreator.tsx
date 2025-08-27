@@ -76,19 +76,38 @@ Initialized with love in JavaScript ❤️`;
             </div>
             
             <div className="animate-fade-in animation-delay-1000 space-y-8">
-                <div className="flex gap-6 justify-center">
-                  <Button
-                    onClick={() => navigate('/chat', { state: { character } })}
-                    className="px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-                  >
-                    Chat
-                  </Button>
-                  <Button
-                    onClick={() => navigate('/meditation', { state: { character } })}
-                    className="px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-                  >
-                    Meditation
-                  </Button>
+                {/* Terminal Flowchart */}
+                <div className="flex flex-col items-center space-y-0">
+                  {/* Vertical line */}
+                  <div className="w-px h-16 bg-white/40"></div>
+                  
+                  {/* Horizontal split */}
+                  <div className="relative flex items-center">
+                    {/* Left horizontal line */}
+                    <div className="w-32 h-px bg-white/40"></div>
+                    
+                    {/* Junction point */}
+                    <div className="w-2 h-2 bg-white/60 rounded-full border border-white/40"></div>
+                    
+                    {/* Right horizontal line */}
+                    <div className="w-32 h-px bg-white/40"></div>
+                  </div>
+                  
+                  {/* Buttons at the end of lines */}
+                  <div className="flex justify-between w-full max-w-md pt-4">
+                    <Button
+                      onClick={() => navigate('/chat', { state: { character } })}
+                      className="px-8 py-3 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-base hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    >
+                      Chat
+                    </Button>
+                    <Button
+                      onClick={() => navigate('/meditation', { state: { character } })}
+                      className="px-8 py-3 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-base hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    >
+                      Meditation
+                    </Button>
+                  </div>
                 </div>
             </div>
           </div>
