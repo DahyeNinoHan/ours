@@ -19,6 +19,7 @@ export const CharacterCreator = ({
 }: CharacterCreatorProps) => {
   const navigate = useNavigate();
   const [showIncubator, setShowIncubator] = useState(true);
+  const [showAwakening, setShowAwakening] = useState(false);
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
     age: 42.73,
@@ -61,9 +62,40 @@ Initialized with love in JavaScript ❤️`;
     }));
   };
   const initializeConsciousness = () => {
-    onComplete(character);
+    setShowAwakening(true);
   };
   return <div className="min-h-screen bg-background text-foreground p-4">
+      {/* Awakening Sequence Overlay */}
+      {showAwakening && (
+        <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
+          <div className="text-center space-y-16">
+            <div className="animate-fade-in">
+              <p className="text-white/80 text-2xl font-mono tracking-[0.1em] mb-24">
+                Entity is awakening...
+              </p>
+            </div>
+            
+            <div className="animate-fade-in animation-delay-1000 space-y-8">
+              <div className="space-y-6">
+                <Button
+                  onClick={() => navigate('/chat', { state: { character } })}
+                  className="block mx-auto px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                >
+                  Chat
+                </Button>
+                
+                <Button
+                  onClick={() => navigate('/meditation', { state: { character } })}
+                  className="block mx-auto px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                >
+                  Meditation
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mt-16 mb-24">
