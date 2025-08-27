@@ -83,8 +83,8 @@ Initialized with love in JavaScript ❤️`;
                   
                   {/* Horizontal split */}
                   <div className="relative flex items-center">
-                    {/* Left horizontal line extending to Chat button center */}
-                    <div className="w-48 h-px bg-white/40"></div>
+                    {/* Left horizontal line */}
+                    <div className="w-32 h-px bg-white/40"></div>
                     
                     {/* Junction point */}
                     <div className="w-2 h-2 bg-white/60 rounded-full border border-white/40"></div>
