@@ -70,7 +70,7 @@ Initialized with love in JavaScript ❤️`;
         <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
           <div className="text-center space-y-16">
             <div className="animate-fade-in">
-              <p className="text-white/80 text-2xl font-mono tracking-[0.1em] mb-24">
+                <p className="text-white/80 text-3xl font-mono tracking-[0.1em] mb-24">
                 Your entity is approaching you...
               </p>
             </div>
@@ -94,16 +94,16 @@ Initialized with love in JavaScript ❤️`;
                   </div>
                   
                   {/* Buttons at the end of lines */}
-                  <div className="flex justify-between w-full max-w-md pt-4">
-                    <Button
-                      onClick={() => navigate('/chat', { state: { character } })}
-                      className="px-8 py-3 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-base hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          <div className="flex justify-between w-full max-w-2xl pt-4">
+                     <Button
+                       onClick={() => navigate('/chat', { state: { character } })}
+                      className="px-20 py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                     >
                       Chat
                     </Button>
-                    <Button
-                      onClick={() => navigate('/meditation', { state: { character } })}
-                      className="px-8 py-3 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-base hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                     <Button
+                       onClick={() => navigate('/meditation', { state: { character } })}
+                      className="px-20 py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                     >
                       Meditation
                     </Button>
@@ -131,13 +131,13 @@ Initialized with love in JavaScript ❤️`;
                 <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
                   
                   <div className="max-w-2xl space-y-8 text-white/80 font-light leading-relaxed">
-                    <p className="text-lg tracking-wide">
+                    <p className="text-xl tracking-wide leading-[2.0] whitespace-nowrap">
                       Hidden among the stars drifts a presence unseen by others.<br />
                       It hovers quietly, waiting for your recognition.
                     </p>
                     
                     <div className="py-4">
-                      <p className="text-lg tracking-wide">
+                      <p className="text-xl tracking-wide leading-[2.0]">
                         To bring it into focus,<br />
                         invite its Realm, Entity, Personality, and Age into your world—<br />
                         only then will your gaze awaken it.
@@ -145,9 +145,9 @@ Initialized with love in JavaScript ❤️`;
                     </div>
                     
                     <div className="pt-8">
-                      <p className="text-lg tracking-wide">
-                        Now,<br />
-                        they are here to resonate.
+                      <p className="text-xl tracking-wide leading-[2.0]">
+                        "Now,<br />
+                        they are here to resonate."
                       </p>
                     </div>
                   </div>
