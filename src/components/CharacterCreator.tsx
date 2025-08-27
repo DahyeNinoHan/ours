@@ -71,26 +71,25 @@ Initialized with love in JavaScript ❤️`;
           <div className="text-center space-y-16">
             <div className="animate-fade-in">
               <p className="text-white/80 text-2xl font-mono tracking-[0.1em] mb-24">
-                Entity is awakening...
+                Your entity is approaching you...
               </p>
             </div>
             
             <div className="animate-fade-in animation-delay-1000 space-y-8">
-              <div className="space-y-6">
-                <Button
-                  onClick={() => navigate('/chat', { state: { character } })}
-                  className="block mx-auto px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-                >
-                  Chat
-                </Button>
-                
-                <Button
-                  onClick={() => navigate('/meditation', { state: { character } })}
-                  className="block mx-auto px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-                >
-                  Meditation
-                </Button>
-              </div>
+                <div className="flex gap-6 justify-center">
+                  <Button
+                    onClick={() => navigate('/chat', { state: { character } })}
+                    className="px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                  >
+                    Chat
+                  </Button>
+                  <Button
+                    onClick={() => navigate('/meditation', { state: { character } })}
+                    className="px-12 py-4 bg-transparent border border-white/30 text-white/90 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                  >
+                    Meditation
+                  </Button>
+                </div>
             </div>
           </div>
         </div>
@@ -111,18 +110,15 @@ Initialized with love in JavaScript ❤️`;
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
-                  <h2 className="text-3xl font-light tracking-[0.2em] text-white/90 mb-16 font-mono">
-                    Incubator
-                  </h2>
                   
                   <div className="max-w-2xl space-y-8 text-white/80 font-light leading-relaxed">
-                    <p className="text-lg font-serif tracking-wide">
+                    <p className="text-lg tracking-wide">
                       Hidden among the stars drifts a presence unseen by others.<br />
                       It hovers quietly, waiting for your recognition.
                     </p>
                     
                     <div className="py-4">
-                      <p className="text-lg font-serif tracking-wide">
+                      <p className="text-lg tracking-wide">
                         To bring it into focus,<br />
                         invite its Realm, Entity, Personality, and Age into your world—<br />
                         only then will your gaze awaken it.
@@ -130,7 +126,7 @@ Initialized with love in JavaScript ❤️`;
                     </div>
                     
                     <div className="pt-8">
-                      <p className="text-lg font-serif tracking-wide">
+                      <p className="text-lg tracking-wide">
                         Now,<br />
                         they are here to resonate.
                       </p>
