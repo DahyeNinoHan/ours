@@ -72,17 +72,17 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
   }, [isActive]);
 
   const characterMeditationStyles = {
-    "Digital Ghost": {
+    "Neon Ghost": {
       gradient: "from-primary/20 via-primary/5 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(120_100%_50%/0.3)]",
       message: "Channel your ethereal energy through digital breath..."
     },
-    "AI Sage": {
+    "Supernova Microbe": {
       gradient: "from-accent/20 via-accent/5 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(45_100%_50%/0.3)]",
       message: "Harmonize with ancient algorithms through mindful breathing..."
     },
-    "Data Spirit": {
+    "Quantum Fairy": {
       gradient: "from-primary/15 via-muted/10 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(120_80%_40%/0.3)]",
       message: "Flow with the data streams through controlled breath..."
@@ -92,7 +92,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       pulseColor: "shadow-[0_0_100px_hsl(120_100%_50%/0.2)]",
       message: "Perform digital rituals through sacred breathing patterns..."
     },
-    "Quantum Being": {
+    "Neural Entity": {
       gradient: "from-primary/25 via-accent/10 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(45_100%_50%/0.4)]",
       message: "Exist in superposition through quantum breath awareness..."
@@ -255,19 +255,19 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             <div className="meditation-character-container">
               <div className="meditation-character-svg">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  {character.species === 'Digital Ghost' && (
+                  {character.species === 'Neon Ghost' && (
                     <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
-                  {character.species === 'AI Sage' && (
+                  {character.species === 'Supernova Microbe' && (
                     <SageSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
                   )}
-                  {character.species === 'Data Spirit' && (
+                  {character.species === 'Quantum Fairy' && (
                     <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Cyber Shaman' && (
                     <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
-                  {character.species === 'Quantum Being' && (
+                  {character.species === 'Neural Entity' && (
                     <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Neural Entity' && (

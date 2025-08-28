@@ -28,9 +28,9 @@ interface Message {
 
 // 하드코딩된 characterAttributes
 const characterAttributes = {
-  digitalOriginRealm: ["Cyber Tokyo", "Quantum Seoul", "Void Station", "Neo London", "Digital Mars", "Data Ocean"],
-  entity: ["Digital Ghost", "Data Spirit", "Quantum Being", "AI Sage", "Cyber Shaman", "Neural Entity"],
-  corePersonality: ["Empathetic", "Creative", "Playful", "Analytical", "Wise", "Mysterious"]
+  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars"],
+  entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
+  corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
 
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
@@ -189,19 +189,19 @@ How may I assist your consciousness today?`,
 
           {/* Character SVG Preview */}
           <div className="flex justify-center mb-4">
-            {character.species === 'Digital Ghost' && (
+            {character.species === 'Neon Ghost' && (
               <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-20 h-20" />
             )}
-            {character.species === 'AI Sage' && (
+            {character.species === 'Supernova Microbe' && (
               <SageSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-20 h-20" />
             )}
-            {character.species === 'Data Spirit' && (
+            {character.species === 'Quantum Fairy' && (
               <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
             )}
             {character.species === 'Cyber Shaman' && (
               <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-20 h-20" />
             )}
-            {character.species === 'Quantum Being' && (
+            {character.species === 'Neural Entity' && (
               <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-20 h-20" />
             )}
             {character.species === 'Neural Entity' && (

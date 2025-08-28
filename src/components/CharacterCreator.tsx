@@ -23,9 +23,9 @@ export const CharacterCreator = ({
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
     age: 42.73,
-    realm: "Cyber Tokyo",
-    species: "Digital Ghost",
-    personality: "Empathetic",
+    realm: "Auroral Rainbow",
+    species: "Neon Ghost",
+    personality: "Pioneer",
     description: "",
     image: "",
     color: "#32cd32"
@@ -187,17 +187,17 @@ Initialized with love in JavaScript ❤️`;
             <div className="flex flex-col items-center mb-6">
               <div className="w-44 h-44 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
                 <div className="w-36 h-36 rounded-full bg-primary/30 flex items-center justify-center">
-                  {character.species === 'Digital Ghost' && <GhostSVG colors={{
+                  {character.species === 'Neon Ghost' && <GhostSVG colors={{
                   baseColor: '#7fffd4',
                   secondaryColor: '#00ced1',
                   accentColor: '#ffffff'
                 }} className="w-36 h-36" />}
-                  {character.species === 'AI Sage' && <SageSVG colors={{
+                  {character.species === 'Supernova Microbe' && <SageSVG colors={{
                   baseColor: '#ffd700',
                   secondaryColor: '#8a2be2',
                   accentColor: '#fff8dc'
                 }} className="w-36 h-36" />}
-                  {character.species === 'Data Spirit' && <SpiritSVG colors={{
+                  {character.species === 'Quantum Fairy' && <SpiritSVG colors={{
                   baseColor: '#00bfff',
                   secondaryColor: '#ff69b4',
                   accentColor: '#e0ffff'
@@ -207,7 +207,7 @@ Initialized with love in JavaScript ❤️`;
                   secondaryColor: '#20b2aa',
                   accentColor: '#ffe4b5'
                 }} className="w-36 h-36" />}
-                  {character.species === 'Quantum Being' && <QuantumSVG colors={{
+                  {character.species === 'Neural Entity' && <QuantumSVG colors={{
                   baseColor: '#00ffea',
                   secondaryColor: '#ff00ea',
                   accentColor: '#fffacd'
@@ -261,9 +261,17 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Entity Species:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(ENTITY_SPECIES).map(species => <Button key={species} variant={character.species === species ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('species', species)} className="text-xs h-8">
+                  {[...Object.keys(ENTITY_SPECIES), "Echo Prism"].map(species => (
+                    <Button
+                      key={species}
+                      variant={character.species === species ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('species', species)}
+                      className="text-xs h-8"
+                    >
                       {species}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
@@ -271,9 +279,17 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Digital Origin Realm:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(DIGITAL_REALMS).map(realm => <Button key={realm} variant={character.realm === realm ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('realm', realm)} className="text-xs h-8">
+                  {[...Object.keys(DIGITAL_REALMS), "Arcane Peru"].map(realm => (
+                    <Button
+                      key={realm}
+                      variant={character.realm === realm ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('realm', realm)}
+                      className="text-xs h-8"
+                    >
                       {realm}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 

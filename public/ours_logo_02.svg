@@ -172,7 +172,7 @@
       </circle>
     </g>
     
-    <!-- Node 5 - Purple: Slow counter-clockwise with random jumps -->
+    <!-- Node 5 - Purple: Slow counter-clockSassy with random jumps -->
     <g>
       <animateTransform attributeName="transform" 
                         type="rotate" 
