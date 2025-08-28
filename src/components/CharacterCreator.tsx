@@ -11,6 +11,8 @@ import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
+import { CharacterColors } from "./characters/GhostSVG";
+
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
 }
@@ -182,16 +184,16 @@ Initialized with love in JavaScript ❤️`;
             color: '#e6a002'
           }}>ENTITY PREVIEW</h2>
             <div style={{
-            marginBottom: '1.25rem'
+            marginBottom: '1.5rem'
           }} />
             <div className="flex flex-col items-center mb-6">
               <div className="w-44 h-44 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
                 <div className="w-36 h-36 rounded-full bg-primary/30 flex items-center justify-center">
                   {character.species === 'Neon Ghost' && <GhostSVG colors={{
-                  baseColor: '#7fffd4',
-                  secondaryColor: '#00ced1',
-                  accentColor: '#ffffff'
-                }} className="w-36 h-36" />}
+                    baseColor: '#e91e63',     
+                    secondaryColor: '#3498db',
+                    accentColor: '#f1c40f'    
+                  }} className="w-36 h-36" />}
                   {character.species === 'Supernova Microbe' && <SageSVG colors={{
                   baseColor: '#ffd700',
                   secondaryColor: '#8a2be2',
@@ -362,3 +364,6 @@ Initialized with love in JavaScript ❤️`;
       </div>
     </div>;
 };
+
+
+export default GhostSVG;
