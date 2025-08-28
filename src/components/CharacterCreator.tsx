@@ -12,6 +12,7 @@ import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
 import { CharacterColors } from "./characters/GhostSVG";
+
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
 }
@@ -36,6 +37,7 @@ export const CharacterCreator = ({
     const realm = DIGITAL_REALMS[character.realm as keyof typeof DIGITAL_REALMS];
     const species = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
     const personality = PERSONALITY_TRAITS[character.personality as keyof typeof PERSONALITY_TRAITS];
+    
     return `A sprightly ${character.age}-cycle-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
 
 Initialized with love in JavaScript ❤️`;
@@ -66,7 +68,8 @@ Initialized with love in JavaScript ❤️`;
   };
   return <div className="min-h-screen bg-background text-foreground p-4">
       {/* Awakening Sequence Overlay */}
-      {showAwakening && <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
+      {showAwakening && (
+        <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
           <div className="text-center space-y-16">
             <div className="animate-fade-in">
                 <p className="text-white/80 text-3xl font-mono tracking-[0.1em] mb-24">
@@ -94,25 +97,24 @@ Initialized with love in JavaScript ❤️`;
                   
                   {/* Buttons at the end of lines */}
                   <div className="flex justify-between w-full max-w-2xl pt-4 gap-x-8">
-                     <Button onClick={() => navigate('/chat', {
-                state: {
-                  character
-                }
-              })} className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]">
+                     <Button
+                       onClick={() => navigate('/chat', { state: { character } })}
+                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                    >
                       Chat
                     </Button>
-                     <Button onClick={() => navigate('/meditation', {
-                state: {
-                  character
-                }
-              })} className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]">
+                     <Button
+                       onClick={() => navigate('/meditation', { state: { character } })}
+                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                    >
                       Meditation
                     </Button>
                   </div>
                 </div>
             </div>
           </div>
-        </div>}
+        </div>
+      )}
       
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -146,18 +148,18 @@ Initialized with love in JavaScript ❤️`;
                     
                     <div className="pt-8">
                       <p className="text-xl tracking-wide leading-[2.0]">
-                        <span style={{
-                        fontFamily: "Noto Sans HK, sans-serif"
-                      }}>" </span>Now,<br />
-                        they are here to resonate.<span style={{
-                        fontFamily: "Noto Sans HK, sans-serif"
-                      }}>"</span>
+                        <span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>" </span>Now,<br />
+                        they are here to resonate.<span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>"</span>
                       </p>
                     </div>
                   </div>
                   
                   {/* Custom close button */}
-                  <button onClick={() => setShowIncubator(false)} className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors z-20" aria-label="Close">
+                  <button 
+                    onClick={() => setShowIncubator(false)}
+                    className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors z-20"
+                    aria-label="Close"
+                  >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -185,7 +187,40 @@ Initialized with love in JavaScript ❤️`;
             marginBottom: '1.5rem'
           }} />
             <div className="flex flex-col items-center mb-6">
-              
+              <div className="w-44 h-44 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
+                <div className="w-36 h-36 rounded-full bg-primary/30 flex items-center justify-center">
+                  {character.species === 'Neon Ghost' && <GhostSVG colors={{
+                    baseColor: '#e91e63',     
+                    secondaryColor: '#3498db',
+                    accentColor: '#f1c40f'    
+                  }} className="w-36 h-36" />}
+                  {character.species === 'Supernova Microbe' && <SageSVG colors={{
+                  baseColor: '#ffd700',
+                  secondaryColor: '#8a2be2',
+                  accentColor: '#fff8dc'
+                }} className="w-36 h-36" />}
+                  {character.species === 'Quantum Fairy' && <SpiritSVG colors={{
+                  baseColor: '#00bfff',
+                  secondaryColor: '#ff69b4',
+                  accentColor: '#e0ffff'
+                }} className="w-36 h-36" />}
+                  {character.species === 'Cyber Shaman' && <ShamanSVG colors={{
+                  baseColor: '#ff6347',
+                  secondaryColor: '#20b2aa',
+                  accentColor: '#ffe4b5'
+                }} className="w-36 h-36" />}
+                  {character.species === 'Neural Entity' && <QuantumSVG colors={{
+                  baseColor: '#00ffea',
+                  secondaryColor: '#ff00ea',
+                  accentColor: '#fffacd'
+                }} className="w-36 h-36" />}
+                  {character.species === 'Neural Entity' && <NeuralSVG colors={{
+                  baseColor: '#32cd32',
+                  secondaryColor: '#4682b4',
+                  accentColor: '#f0e68c'
+                }} className="w-36 h-36" />}
+                </div>
+              </div>
               <h3 className="text-base mt-4" style={{
               color: '#e6a002',
               fontWeight: 400
@@ -228,10 +263,20 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Entity Species:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {[...Object.keys(ENTITY_SPECIES), "Echo Prism"].map(species => <Button key={species} variant={character.species === species ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('species', species)} className={`text-xs h-8 ${character.species === species ? 'bg-[#E69F01] text-black' : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}>
+                  {[...Object.keys(ENTITY_SPECIES), "Echo Prism"].map(species => (
+                    <Button
+                      key={species}
+                      variant={character.species === species ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('species', species)}
+                      className={`text-xs h-8 ${character.species === species
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
                       {species}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
@@ -239,10 +284,20 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Digital Origin Realm:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {[...Object.keys(DIGITAL_REALMS), "Arcane Peru"].map(realm => <Button key={realm} variant={character.realm === realm ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('realm', realm)} className={`text-xs h-8 ${character.realm === realm ? 'bg-[#E69F01] text-black' : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}>
+                  {[...Object.keys(DIGITAL_REALMS), "Arcane Peru"].map(realm => (
+                    <Button
+                      key={realm}
+                      variant={character.realm === realm ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('realm', realm)}
+                      className={`text-xs h-8 ${character.realm === realm
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
                       {realm}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
@@ -269,10 +324,20 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Core Personality:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(PERSONALITY_TRAITS).map(personality => <Button key={personality} variant={character.personality === personality ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('personality', personality)} className={`text-xs h-8 ${character.personality === personality ? 'bg-[#E69F01] text-black' : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}>
+                  {Object.keys(PERSONALITY_TRAITS).map(personality => (
+                    <Button
+                      key={personality}
+                      variant={character.personality === personality ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('personality', personality)}
+                      className={`text-xs h-8 ${character.personality === personality
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
                       {personality}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
@@ -299,4 +364,6 @@ Initialized with love in JavaScript ❤️`;
       </div>
     </div>;
 };
+
+
 export default GhostSVG;
