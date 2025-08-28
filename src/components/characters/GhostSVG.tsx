@@ -27,7 +27,7 @@ const GhostSVG = ({ colors, className }: GhostSVGProps) => (
       </filter>
     </defs>
     {/* Background aura */}
-    <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
+    <circle cx="100" cy="100" r="100" fill={colors.baseColor} opacity="0.1"/>
   <g transform="translate(100,100) scale(1.5) translate(-100,-100)">
       {/* Main ethereal form */}
       <path 

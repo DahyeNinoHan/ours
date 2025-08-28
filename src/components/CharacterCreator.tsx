@@ -184,41 +184,46 @@ Initialized with love in JavaScript ❤️`;
             color: '#e6a002'
           }}>ENTITY PREVIEW</h2>
             <div style={{
-            marginBottom: '1.5rem'
+            marginBottom: '2.5rem'
           }} />
             <div className="flex flex-col items-center mb-6">
-              <div className="w-44 h-44 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 pulse-glow">
-                <div className="w-36 h-36 rounded-full bg-primary/30 flex items-center justify-center">
+              <div className="relative w-56 h-56 mb-4 flex items-center justify-center">
+                {/* 부모 원 */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20" style={{zIndex: 1}} />
+                {/* 내부 원 */}
+                <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#241116] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
+                {/* 캐릭터 SVG */}
+                <div className="absolute left-1/2 top-1/2" style={{transform: 'translate(-50%, -50%)', zIndex: 3}}>
                   {character.species === 'Neon Ghost' && <GhostSVG colors={{
                     baseColor: '#e91e63',     
                     secondaryColor: '#3498db',
                     accentColor: '#f1c40f'    
                   }} className="w-36 h-36" />}
                   {character.species === 'Supernova Microbe' && <SageSVG colors={{
-                  baseColor: '#ffd700',
-                  secondaryColor: '#8a2be2',
-                  accentColor: '#fff8dc'
-                }} className="w-36 h-36" />}
+                    baseColor: '#ffd700',
+                    secondaryColor: '#8a2be2',
+                    accentColor: '#fff8dc'
+                  }} className="w-36 h-36" />}
                   {character.species === 'Quantum Fairy' && <SpiritSVG colors={{
-                  baseColor: '#00bfff',
-                  secondaryColor: '#ff69b4',
-                  accentColor: '#e0ffff'
-                }} className="w-36 h-36" />}
+                    baseColor: '#00bfff',
+                    secondaryColor: '#ff69b4',
+                    accentColor: '#e0ffff'
+                  }} className="w-36 h-36" />}
                   {character.species === 'Cyber Shaman' && <ShamanSVG colors={{
-                  baseColor: '#ff6347',
-                  secondaryColor: '#20b2aa',
-                  accentColor: '#ffe4b5'
-                }} className="w-36 h-36" />}
+                    baseColor: '#ff6347',
+                    secondaryColor: '#20b2aa',
+                    accentColor: '#ffe4b5'
+                  }} className="w-36 h-36" />}
                   {character.species === 'Neural Entity' && <QuantumSVG colors={{
-                  baseColor: '#00ffea',
-                  secondaryColor: '#ff00ea',
-                  accentColor: '#fffacd'
-                }} className="w-36 h-36" />}
+                    baseColor: '#00ffea',
+                    secondaryColor: '#ff00ea',
+                    accentColor: '#fffacd'
+                  }} className="w-36 h-36" />}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
-                  baseColor: '#32cd32',
-                  secondaryColor: '#4682b4',
-                  accentColor: '#f0e68c'
-                }} className="w-36 h-36" />}
+                    baseColor: '#32cd32',
+                    secondaryColor: '#4682b4',
+                    accentColor: '#f0e68c'
+                  }} className="w-36 h-36" />}
                 </div>
               </div>
               <h3 className="text-base mt-4" style={{
