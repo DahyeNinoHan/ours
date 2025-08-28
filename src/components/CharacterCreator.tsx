@@ -7,9 +7,9 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Character, DIGITAL_REALMS, ENTITY_SPECIES, PERSONALITY_TRAITS } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
+import QuantumSVG from "../components/characters/QuantumSVG";
 import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
-import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
 import { CharacterColors } from "./characters/GhostSVG";
 
@@ -204,20 +204,15 @@ Initialized with love in JavaScript ❤️`;
                     secondaryColor: '#32cd32', // 라임 그린 (눈동자, 꽃잎)
                     accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
                   }} className="w-36 h-36" />}
-                  {character.species === 'Quantum Fairy' && <SpiritSVG colors={{
-                    baseColor: '#00bfff',
-                    secondaryColor: '#ff69b4',
-                    accentColor: '#e0ffff'
+                  {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
+                    baseColor: '#ffd700',    // 골드 (테두리)
+                    secondaryColor: '#ff0000', // 빨간색 (입, 하단 라인)
+                    accentColor: '#0080ff'    // 진한 파란색 (눈, 상단 라인)
                   }} className="w-36 h-36" />}
                   {character.species === 'Cyber Shaman' && <ShamanSVG colors={{
                     baseColor: '#ff6347',
                     secondaryColor: '#20b2aa',
                     accentColor: '#ffe4b5'
-                  }} className="w-36 h-36" />}
-                  {character.species === 'Neural Entity' && <QuantumSVG colors={{
-                    baseColor: '#00ffea',
-                    secondaryColor: '#ff00ea',
-                    accentColor: '#fffacd'
                   }} className="w-36 h-36" />}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
                     baseColor: '#32cd32',
