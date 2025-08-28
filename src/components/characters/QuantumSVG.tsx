@@ -48,11 +48,9 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
             strokeWidth="3" 
             fill="none" 
             filter="url(#quantumFairyGlow)"/>
-
-      {/* Spirit eyes - 더 진한 색으로 */}
-      <circle cx="90" cy="75" r="4" fill={colors.accentColor} filter="url(#quantumFairyGlow)"/>
-      <circle cx="110" cy="75" r="4" fill={colors.accentColor} filter="url(#quantumFairyGlow)"/>
-
+      {/* Spirit eyes - 진한 노란색으로 */}
+      <circle cx="90" cy="75" r="4" fill={colors.baseColor} filter="url(#quantumFairyGlow)"/>
+      <circle cx="110" cy="75" r="4" fill={colors.baseColor} filter="url(#quantumFairyGlow)"/>
       {/* Spirit mouth - 빨간색으로 */}
       <ellipse cx="100" cy="90" rx="8" ry="3" fill={colors.secondaryColor} filter="url(#quantumFairyGlow)"/>
     </svg>

@@ -8,8 +8,8 @@ import { Character, DIGITAL_REALMS, ENTITY_SPECIES, PERSONALITY_TRAITS } from "@
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
 import QuantumSVG from "./characters/QuantumSVG";
-import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
+import SpiritSVG from "./characters/SpiritSVG";
 import NeuralSVG from "./characters/NeuralSVG";
 
 interface CharacterCreatorProps {
@@ -204,14 +204,14 @@ Initialized with love in JavaScript ❤️`;
                     accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
                   }} className="w-36 h-36" />}
                   {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
-                    baseColor: '#ffd700',    // 골드 (테두리)
-                    secondaryColor: '#ff0000', // 빨간색 (입, 하단 라인)
-                    accentColor: '#0080ff'    // 진한 파란색 (눈, 상단 라인)
+                    baseColor: '#ffd700',     // 골드 (테두리)
+                    secondaryColor: '#ff1493', // 딥 핑크 (입, 하단 라인)
+                    accentColor: '#00bfff'     // 딥 스카이 블루 (눈, 상단 라인)
                   }} className="w-36 h-36" />}
                   {character.species === 'Cyber Shaman' && <ShamanSVG colors={{
-                    baseColor: '#ff6347',
-                    secondaryColor: '#20b2aa',
-                    accentColor: '#ffe4b5'
+                    baseColor: '#9b59b6',     // 보라색 (후드 테두리)
+                    secondaryColor: '#e91e63', // 핫 핑크 (삼각형, 의식원)
+                    accentColor: '#f39c12'    // 오렌지 (의식 심볼들, 십자선)
                   }} className="w-36 h-36" />}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
                     baseColor: '#32cd32',
