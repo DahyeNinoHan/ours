@@ -7,11 +7,10 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Character, DIGITAL_REALMS, ENTITY_SPECIES, PERSONALITY_TRAITS } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
-import QuantumSVG from "../components/characters/QuantumSVG";
+import QuantumSVG from "./characters/QuantumSVG";
 import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import NeuralSVG from "./characters/NeuralSVG";
-import { CharacterColors } from "./characters/GhostSVG";
 
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
@@ -300,25 +299,6 @@ Initialized with love in JavaScript ❤️`;
                   ))}
                 </div>
               </div>
-
-
-              {/* Entity Species
-               <div>
-                <label className="text-sm font-medium mb-2 block">Entity Species:</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(ENTITY_SPECIES).map((species) => (
-                    <Button
-                      key={species}
-                      variant={character.species === species ? "default" : "secondary"}
-                      size="sm"
-                      onClick={() => handleOptionSelect('species', species)}
-                      className="text-xs h-8"
-                    >
-                      {species}
-                    </Button>
-                  ))}
-                </div>
-               </div> */}
 
               {/* Core Personality */}
               <div>

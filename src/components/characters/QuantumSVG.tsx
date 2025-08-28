@@ -58,3 +58,5 @@ const QuantumSVG = ({ colors, className }: QuantumSVGProps) => {
     </svg>
   );
 };
+
+export default QuantumSVG;
