@@ -189,7 +189,7 @@ Initialized with love in JavaScript ❤️`;
             <div className="flex flex-col items-center mb-6">
               <div className="relative w-56 h-56 mb-4 flex items-center justify-center">
                 {/* 부모 원 */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20" style={{zIndex: 1}} />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20" style={{zIndex: 1, backgroundColor: '#0D0D0D', mixBlendMode: 'multiply'}} />
                 {/* 내부 원 */}
                 <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#241116] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
                 {/* 캐릭터 SVG */}
