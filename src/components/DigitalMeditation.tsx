@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Character } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
-import SageSVG from "./characters/SageSVG";
+import MicrobeSVG from "./characters/MicrobeSVG";
 import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
@@ -259,7 +259,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
                     <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Supernova Microbe' && (
-                    <SageSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
+                    <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Quantum Fairy' && (
                     <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />

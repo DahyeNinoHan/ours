@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Character, DIGITAL_REALMS, ENTITY_SPECIES, PERSONALITY_TRAITS } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
-import SageSVG from "./characters/SageSVG";
+import MicrobeSVG from "./characters/MicrobeSVG";
 import SpiritSVG from "./characters/SpiritSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
@@ -199,10 +199,10 @@ Initialized with love in JavaScript ❤️`;
                     secondaryColor: '#3498db',
                     accentColor: '#f1c40f'    
                   }} className="w-36 h-36" />}
-                  {character.species === 'Supernova Microbe' && <SageSVG colors={{
-                    baseColor: '#ffd700',
-                    secondaryColor: '#8a2be2',
-                    accentColor: '#fff8dc'
+                  {character.species === 'Supernova Microbe' && <MicrobeSVG colors={{
+                    baseColor: '#ff69b4',    // 핫 핑크 (몸체 테두리)
+                    secondaryColor: '#32cd32', // 라임 그린 (눈동자, 꽃잎)
+                    accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
                   }} className="w-36 h-36" />}
                   {character.species === 'Quantum Fairy' && <SpiritSVG colors={{
                     baseColor: '#00bfff',
@@ -369,6 +369,3 @@ Initialized with love in JavaScript ❤️`;
       </div>
     </div>;
 };
-
-
-export default GhostSVG;
