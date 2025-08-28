@@ -22,7 +22,7 @@ export const CharacterCreator = ({
   const [showAwakening, setShowAwakening] = useState(false);
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
-    age: 42.73,
+    age: 3920896199,
     realm: "Auroral Rainbow",
     species: "Neon Ghost",
     personality: "Pioneer",
@@ -249,11 +249,11 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <div className="flex justify-between items-center mb-2">
                   <label className="text-sm font-medium">Age (Digital Years):</label>
-                  <span className="text-accent font-bold">{character.age}B</span>
+                  {/* <span className="text-accent font-bold">{character.age}B</span> */}
                 </div>
-                  <Slider value={[character.age]} onValueChange={value => handleSliderChange('age', value)} max={42.73} min={-40.28} step={0.01} className="w-full" thumbGlow />
+                  <Slider value={[character.age]} onValueChange={value => handleSliderChange('age', value)} max={3920896199} min={-3999817093} step={0.01} className="w-full" thumbGlow />
                 <div className="text-xs text-muted-foreground mt-1">
-                  Selected: {character.age} Billion years old
+                  Selected: {Math.floor(character.age)} years old
                 </div>
               </div>
 
