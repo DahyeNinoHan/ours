@@ -267,7 +267,10 @@ Initialized with love in JavaScript ❤️`;
                       variant={character.species === species ? "default" : "secondary"}
                       size="sm"
                       onClick={() => handleOptionSelect('species', species)}
-                      className="text-xs h-8"
+                      className={`text-xs h-8 ${character.species === species
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
                     >
                       {species}
                     </Button>
@@ -285,7 +288,10 @@ Initialized with love in JavaScript ❤️`;
                       variant={character.realm === realm ? "default" : "secondary"}
                       size="sm"
                       onClick={() => handleOptionSelect('realm', realm)}
-                      className="text-xs h-8"
+                      className={`text-xs h-8 ${character.realm === realm
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
                     >
                       {realm}
                     </Button>
@@ -316,9 +322,20 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Core Personality:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(PERSONALITY_TRAITS).map(personality => <Button key={personality} variant={character.personality === personality ? "default" : "secondary"} size="sm" onClick={() => handleOptionSelect('personality', personality)} className="text-xs h-8">
+                  {Object.keys(PERSONALITY_TRAITS).map(personality => (
+                    <Button
+                      key={personality}
+                      variant={character.personality === personality ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('personality', personality)}
+                      className={`text-xs h-8 ${character.personality === personality
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
                       {personality}
-                    </Button>)}
+                    </Button>
+                  ))}
                 </div>
               </div>
 
