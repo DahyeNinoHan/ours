@@ -230,10 +230,6 @@ How may I assist your consciousness today?`,
               <span className="text-muted-foreground">Activity:</span>
               <div className="text-primary">COUNSELING</div>
             </div>
-            <div>
-              <span className="text-muted-foreground">Memory:</span>
-              <div className="text-primary">67%</div>
-            </div>
           </div>
 
         </Card>

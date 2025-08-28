@@ -229,7 +229,7 @@ Initialized with love in JavaScript ❤️`;
               <p className="text-muted-foreground">{character.description}</p>
             </div>
 
-            <Button onClick={initializeConsciousness} className="w-full mt-6 bg-accent hover:bg-accent/80 text-accent-foreground font py-3 glow-effect">
+            <Button onClick={initializeConsciousness} className="w-full mt-6 bg-[#E69F01] hover:bg-[#E69F01]/80 text-black font-bold py-3 glow-effect">
               INITIALIZE YOUR OWN ENTITY
             </Button>
             {/* <Button
