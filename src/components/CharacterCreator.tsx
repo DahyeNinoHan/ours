@@ -146,8 +146,8 @@ Initialized with love in JavaScript ❤️`;
                     
                     <div className="pt-8">
                       <p className="text-xl tracking-wide leading-[2.0]">
-                        "Now,<br />
-                        they are here to resonate."
+                        <span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>" </span>Now,<br />
+                        they are here to resonate.<span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>"</span>
                       </p>
                     </div>
                   </div>
