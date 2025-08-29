@@ -228,7 +228,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             <Card className="bg-transparent border-none shadow-none">
               <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
                 <div className="text-2xl font-bold neon-text">{completedCycles}</div>
-                <div className="text-xs text-muted-foreground">Breathing Cycles</div>
+                <div className="text-xs text-muted-foreground">Cycles</div>
               </CardContent>
             </Card>
             <Card className="bg-transparent border-none shadow-none">
