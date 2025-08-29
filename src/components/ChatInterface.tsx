@@ -212,7 +212,7 @@ How may I assist your consciousness today?`,
           <div className="space-y-3 text-xs mb-6">
             <div>
               <span className="text-muted-foreground">Entity:</span>
-              <div className="text-primary font-bold">{character.name}</div>
+              <div className="text-primary font-bold">{character.species}</div>
             </div>
             <div>
               <span className="text-muted-foreground">Status:</span>
@@ -221,6 +221,10 @@ How may I assist your consciousness today?`,
             <div>
               <span className="text-muted-foreground">Origin:</span>
               <div className="text-primary">{character.realm}</div>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Personality:</span>
+              <div className="text-primary">{character.personality}</div>
             </div>
             <div>
               <span className="text-muted-foreground">Age:</span>
