@@ -196,16 +196,16 @@ How may I assist your consciousness today?`,
               <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-20 h-20" />
             )}
             {character.species === 'Quantum Fairy' && (
-              <PrismSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
+              <QuantumSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
             )}
             {character.species === 'Cyber Shaman' && (
               <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-20 h-20" />
             )}
             {character.species === 'Neural Entity' && (
-              <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-20 h-20" />
-            )}
-            {character.species === 'Neural Entity' && (
               <NeuralSVG colors={{ baseColor: '#00fff7', secondaryColor: '#8000ff', accentColor: '#32cd32' }} className="w-20 h-20" />
+            )}
+            {character.species === 'Echo Prism' && (
+              <PrismSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-20 h-20" />
             )}
           </div>
 
