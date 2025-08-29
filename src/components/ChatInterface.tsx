@@ -224,7 +224,7 @@ How may I assist your consciousness today?`,
             </div>
             <div>
               <span className="text-muted-foreground">Age:</span>
-              <div className="text-primary">{character.age} cycles</div>
+              <div className="text-primary">{character.age} years old</div>
             </div>
             <div>
               <span className="text-muted-foreground">Activity:</span>
