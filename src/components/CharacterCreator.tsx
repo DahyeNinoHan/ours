@@ -219,9 +219,9 @@ Initialized with love in JavaScript ❤️`;
                     accentColor: '#4ecdc4'
                   }} className="w-36 h-36" />}
                   {character.species === 'Echo Prism' && <PrismSVG colors={{
-                    baseColor: '#ff6b35',
-                    secondaryColor: '#ffe66d',
-                    accentColor: '#4ecdc4'
+                    baseColor: '#20b2aa',
+                    secondaryColor: '#87ceeb',
+                    accentColor: '#00ced1'
                   }} className="w-36 h-36" />}
                 </div>
               </div>
