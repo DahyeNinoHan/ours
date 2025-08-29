@@ -37,7 +37,7 @@ export const CharacterCreator = ({
     const species = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
     const personality = PERSONALITY_TRAITS[character.personality as keyof typeof PERSONALITY_TRAITS];
     
-    return `A sprightly ${character.age}-cycle-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
+    return `A sprightly ${character.age}-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
 
 Initialized with love in JavaScript ❤️`;
   };
@@ -267,7 +267,7 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Entity Species:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {[...Object.keys(ENTITY_SPECIES), "Echo Prism"].map(species => (
+                  {Object.keys(ENTITY_SPECIES).map(species => (
                     <Button
                       key={species}
                       variant={character.species === species ? "default" : "secondary"}
@@ -288,7 +288,7 @@ Initialized with love in JavaScript ❤️`;
               <div>
                 <label className="text-sm font-medium mb-2 block">Digital Origin Realm:</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {[...Object.keys(DIGITAL_REALMS), "Arcane Peru"].map(realm => (
+                  {Object.keys(DIGITAL_REALMS).map(realm => (
                     <Button
                       key={realm}
                       variant={character.realm === realm ? "default" : "secondary"}
