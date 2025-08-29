@@ -96,11 +96,6 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       gradient: "from-primary/25 via-accent/10 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(45_100%_50%/0.4)]",
       message: "Exist in superposition through quantum breath awareness..."
-    },
-    "Neural Entity": {
-      gradient: "from-muted/20 via-primary/8 to-transparent",
-      pulseColor: "shadow-[0_0_100px_hsl(120_60%_50%/0.3)]",
-      message: "Optimize neural pathways through systematic breathing..."
     }
   };
 
