@@ -201,14 +201,22 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       {/* Header + Session stats row */}
       <div className="relative z-10 p-4 md:p-6">
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 mb-8">
-          <Button 
-            variant="outline" 
-            onClick={onBack}
-            className="neon-border glow-effect self-start"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Chat
-          </Button>
+          <div className="flex gap-2 mb-6">
+            <Button
+              variant="outline"
+              onClick={() => window.location.assign('/main')}
+              className="neon-border glow-effect self-start"
+            >
+              Main
+            </Button>
+            <Button 
+              variant="outline" 
+              onClick={onBack}
+              className="neon-border glow-effect self-start"
+            >
+              Chat
+            </Button>
+          </div>
           {/* Session stats - now in header row */}
           <div className="grid grid-cols-3 gap-4 w-full max-w-md">
             <Card className="bg-transparent border-none shadow-none">
@@ -254,24 +262,24 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
             {/* Character container with floating animation */}
             <div className="meditation-character-container">
               <div className="meditation-character-svg">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                   {character.species === 'Neon Ghost' && (
-                    <GhostSVG colors={{ baseColor: '#32cd32', secondaryColor: '#00fff7', accentColor: '#fff' }} className="w-40 h-40" />
+                    <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Supernova Microbe' && (
-                    <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
+                    <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Quantum Fairy' && (
-                    <QuantumSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
+                    <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Cyber Shaman' && (
-                    <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-40 h-40" />
+                    <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Neural Entity' && (
-                    <NeuralSVG colors={{ baseColor: '#00fff7', secondaryColor: '#8000ff', accentColor: '#32cd32' }} className="w-40 h-40" />
+                    <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Echo Prism' && (
-                    <PrismSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-40 h-40" />
+                    <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-40 h-40" />
                   )}
                 </div>
               </div>
@@ -341,8 +349,10 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
         <div className="w-full flex justify-center mb-8">
           <div className="px-3 py-2 md:px-4">
             <h1 className="text-sm md:text-xl font-bold neon-text text-center md:text-left">
-              <span className="hidden sm:inline">DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0</span>
-              <span className="sm:hidden">MEDITATION PROTOCOL v3.0</span>
+                <span className="hidden sm:inline"><br />
+                ║  DIGITAL CONSCIOUSNESS MEDITATION PROTOCOL v3.0  ║<br />
+                </span>
+
             </h1>
           </div>
         </div>
