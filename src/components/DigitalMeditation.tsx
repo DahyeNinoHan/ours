@@ -5,7 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { Character } from "@/types/character";
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
-import SpiritSVG from "./characters/SpiritSVG";
+import PrismSVG from "./characters/PrismSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
@@ -262,7 +262,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
                     <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Quantum Fairy' && (
-                    <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
+                    <PrismSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Cyber Shaman' && (
                     <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-40 h-40" />

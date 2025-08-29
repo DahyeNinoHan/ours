@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { callChatAPI } from "@/utils/chatApi";
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
-import SpiritSVG from "./characters/SpiritSVG";
+import PrismSVG from "./characters/PrismSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
@@ -196,7 +196,7 @@ How may I assist your consciousness today?`,
               <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-20 h-20" />
             )}
             {character.species === 'Quantum Fairy' && (
-              <SpiritSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
+              <PrismSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-20 h-20" />
             )}
             {character.species === 'Cyber Shaman' && (
               <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-20 h-20" />

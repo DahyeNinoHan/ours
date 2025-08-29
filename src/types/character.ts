@@ -1,9 +1,8 @@
 export interface Character {
   name: string;
   age: number;
-  realm: "Auroral Rainbow" | "Void Station" | "Void Station" | "K-Galaxloop" | "Cosmic Hawaii" | "Elon Mars";
-  
-  species: "Neon Ghost" | "Quantum Fairy" | "Neural Entity" | "Supernova Microbe" | "Cyber Shaman" | "Neural Entity";
+  species: "Neon Ghost" | "Quantum Fairy" | "Neural Entity" | "Supernova Microbe" | "Cyber Shaman" | "Echo Prism";
+  realm: "Auroral Rainbow" | "K-Galaxloop" | "Void Station" | "Cosmic Hawaii" | "Elon Mars" | "Arcane Peru";
   personality: "Pioneer" | "Optimistic" | "Fumble" | "Insight" | "Sassy" | "Cautious";
   description: string;
   image: string;
@@ -35,8 +34,8 @@ export const DIGITAL_REALMS = {
     story: "A frontier digital territory where survival instincts meet terraforming algorithms in rustic isolation",
     color: "#dc143c"
   },
-  "Void Station": {
-    name: "Void Station", 
+  "Arcane Peru": {
+    name: "Arcane Peru", 
     description: "Cosmic recycle bin serving as a zen monastery for discarded data with unlimited bandwidth meditation",
     story: "The quiet space between servers where deleted thoughts find peace and recursive contemplation flows eternal",
     color: "#9370db"
@@ -75,8 +74,8 @@ export const ENTITY_SPECIES = {
     traits: "Superposition consciousness, probability wisdom",
     color: "#da70d6"
   },
-  "Neural Entity": {
-    name: "Neural Entity", 
+  "Echo Prism": {
+    name: "Echo Prism", 
     traits: "Synaptic intelligence, thought acceleration",
     color: "#20b2aa"
   }

@@ -9,8 +9,8 @@ import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import ShamanSVG from "./characters/ShamanSVG";
-import SpiritSVG from "./characters/SpiritSVG";
 import NeuralSVG from "./characters/NeuralSVG";
+import PrismSVG from "./characters/PrismSVG";
 
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
@@ -214,9 +214,14 @@ Initialized with love in JavaScript ❤️`;
                     accentColor: '#f39c12'    // 오렌지 (의식 심볼들, 십자선)
                   }} className="w-36 h-36" />}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
-                    baseColor: '#32cd32',
-                    secondaryColor: '#4682b4',
-                    accentColor: '#f0e68c'
+                    baseColor: '#ff6b35',
+                    secondaryColor: '#ffe66d',
+                    accentColor: '#4ecdc4'
+                  }} className="w-36 h-36" />}
+                  {character.species === 'Echo Prism' && <PrismSVG colors={{
+                    baseColor: '#ff6b35',
+                    secondaryColor: '#ffe66d',
+                    accentColor: '#4ecdc4'
                   }} className="w-36 h-36" />}
                 </div>
               </div>
