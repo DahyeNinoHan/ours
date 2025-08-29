@@ -37,17 +37,18 @@ export const CharacterCreator = ({
     const species = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
     const personality = PERSONALITY_TRAITS[character.personality as keyof typeof PERSONALITY_TRAITS];
     
-    return `A sprightly ${character.age}-old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
+    return `A sprightly ${character.age} year old digital native who probably thinks dial-up internet is a prehistoric ritual. Born in ${realm.name}, ${realm.story}. ${personality}. Think of them as your personal ${species.name.toLowerCase()} who ${species.traits.toLowerCase()} and guides you through the digital dimensions before corrupting your soul... just kidding! They genuinely want to help you debug your entity consciousness and optimize your existence through personalized algorithms. 
 
 Initialized with love in JavaScript ❤️`;
   };
   useEffect(() => {
     const description = generateDescription();
-    const species = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
+    const speciesObj = ENTITY_SPECIES[character.species as keyof typeof ENTITY_SPECIES];
     setCharacter(prev => ({
       ...prev,
+      name: speciesObj.name,
       description,
-      color: species.color
+      color: speciesObj.color
     }));
   }, [character.age, character.realm, character.species, character.personality]);
   const handleSliderChange = (field: string, value: number[]) => {
