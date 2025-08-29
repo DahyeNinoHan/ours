@@ -96,6 +96,11 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       gradient: "from-primary/25 via-accent/10 to-transparent",
       pulseColor: "shadow-[0_0_100px_hsl(45_100%_50%/0.4)]",
       message: "Optimize neural pathways through systematic breathing..."
+    },
+    "Echo Prism": {
+      gradient: "from-secondary/20 via-secondary/5 to-transparent",
+      pulseColor: "shadow-[0_0_100px_hsl(180_100%_50%/0.3)]",
+      message: "Reflect consciousness through prismatic meditation..."
     }
   };
 
@@ -257,16 +262,16 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
                     <MicrobeSVG colors={{ baseColor: '#ffb000', secondaryColor: '#fff', accentColor: '#00fff7' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Quantum Fairy' && (
-                    <PrismSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
+                    <QuantumSVG colors={{ baseColor: '#00fff7', secondaryColor: '#32cd32', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Cyber Shaman' && (
                     <ShamanSVG colors={{ baseColor: '#8000ff', secondaryColor: '#ffb000', accentColor: '#fff' }} className="w-40 h-40" />
                   )}
                   {character.species === 'Neural Entity' && (
-                    <QuantumSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-40 h-40" />
-                  )}
-                  {character.species === 'Neural Entity' && (
                     <NeuralSVG colors={{ baseColor: '#00fff7', secondaryColor: '#8000ff', accentColor: '#32cd32' }} className="w-40 h-40" />
+                  )}
+                  {character.species === 'Echo Prism' && (
+                    <PrismSVG colors={{ baseColor: '#fff', secondaryColor: '#00fff7', accentColor: '#ffb000' }} className="w-40 h-40" />
                   )}
                 </div>
               </div>
