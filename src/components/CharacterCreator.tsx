@@ -19,7 +19,11 @@ export const CharacterCreator = ({
   onComplete
 }: CharacterCreatorProps) => {
   const navigate = useNavigate();
-  const [showIncubator, setShowIncubator] = useState(true);
+  const [showIncubator, setShowIncubator] = useState(() => {
+    // Check if user has seen the popup before
+    const hasSeenPopup = localStorage.getItem('hasSeenPopup');
+    return !hasSeenPopup; // Show popup only if user hasn't seen it
+  });
   const [showAwakening, setShowAwakening] = useState(false);
   const [character, setCharacter] = useState<Character>({
     name: "QUANTUM ENTITY",
@@ -119,7 +123,10 @@ Initialized with love in JavaScript ❤️`;
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mt-16 mb-24">
-          <Dialog open={showIncubator} onOpenChange={setShowIncubator}>
+          <Dialog open={showIncubator} onOpenChange={(open) => {
+            setShowIncubator(open);
+            if (!open) localStorage.setItem('hasSeenPopup', 'true');
+          }}>
             <DialogContent className="max-w-[90vw] w-[90vw] h-[80vh] p-0 bg-black/95 border-none shadow-none backdrop-blur-sm [&>button]:hidden" style={{
             backgroundColor: 'rgba(0, 0, 0, 0.95)',
             border: 'none',
@@ -156,7 +163,10 @@ Initialized with love in JavaScript ❤️`;
                   
                   {/* Custom close button */}
                   <button 
-                    onClick={() => setShowIncubator(false)}
+                    onClick={() => {
+                      setShowIncubator(false);
+                      localStorage.setItem('hasSeenPopup', 'true');
+                    }}
                     className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors z-20"
                     aria-label="Close"
                   >
