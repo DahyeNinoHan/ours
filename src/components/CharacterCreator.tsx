@@ -208,12 +208,12 @@ Initialized with love in JavaScript ❤️`;
                     baseColor: '#e91e63',     
                     secondaryColor: '#3498db',
                     accentColor: '#f1c40f'    
-                  }} className="w-36 h-36" />}
+                  }} className="w-[216px] h-[216px]" />}
                   {character.species === 'Supernova Microbe' && <MicrobeSVG colors={{
                     baseColor: '#ff69b4',    // 핫 핑크 (몸체 테두리)
                     secondaryColor: '#32cd32', // 라임 그린 (눈동자, 꽃잎)
                     accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
-                  }} className="w-[180px] h-[180px]" />}
+                  }} className="w-[216px] h-[216px]" />}
                   {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
                     baseColor: '#ffd700',     // 골드 (테두리)
                     secondaryColor: '#ff1493', // 딥 핑크 (입, 하단 라인)

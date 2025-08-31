@@ -190,22 +190,22 @@ How may I assist your consciousness today?`,
           {/* Character SVG Preview */}
           <div className="flex justify-center mb-4">
             {character.species === 'Neon Ghost' && (
-              <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-20 h-20" />
+              <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-40 h-40" />
             )}
             {character.species === 'Supernova Microbe' && (
-              <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-20 h-20" />
+              <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-40 h-40" />
             )}
             {character.species === 'Quantum Fairy' && (
-              <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-20 h-20" />
+              <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-40 h-40" />
             )}
             {character.species === 'Cyber Shaman' && (
-              <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-20 h-20" />
+              <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-40 h-40" />
             )}
             {character.species === 'Neural Entity' && (
-              <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-20 h-20" />
+              <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-40 h-40" />
             )}
             {character.species === 'Echo Prism' && (
-              <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-20 h-20" />
+              <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-40 h-40" />
             )}
           </div>
 
