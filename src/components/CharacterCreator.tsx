@@ -213,27 +213,31 @@ Initialized with love in JavaScript ❤️`;
                     baseColor: '#ff69b4',    // 핫 핑크 (몸체 테두리)
                     secondaryColor: '#32cd32', // 라임 그린 (눈동자, 꽃잎)
                     accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
-                  }} className="w-36 h-36" />}
+                  }} className="w-[180px] h-[180px]" />}
                   {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
                     baseColor: '#ffd700',     // 골드 (테두리)
                     secondaryColor: '#ff1493', // 딥 핑크 (입, 하단 라인)
                     accentColor: '#00bfff'     // 딥 스카이 블루 (눈, 상단 라인)
-                  }} className="w-36 h-36" />}
-                  {character.species === 'Cyber Shaman' && <ShamanSVG colors={{
-                    baseColor: '#9b59b6',     // 보라색 (후드 테두리)
-                    secondaryColor: '#e91e63', // 핫 핑크 (삼각형, 의식원)
-                    accentColor: '#f39c12'    // 오렌지 (의식 심볼들, 십자선)
-                  }} className="w-36 h-36" />}
+                  }} className="w-[216px] h-[216px]" />}
+                  {character.species === 'Cyber Shaman' && (
+                    <div style={{position: 'relative', top: '-8px'}}>
+                      <ShamanSVG colors={{
+                        baseColor: '#9b59b6',     // 보라색 (후드 테두리)
+                        secondaryColor: '#e91e63', // 핫 핑크 (삼각형, 의식원)
+                        accentColor: '#f39c12'    // 오렌지 (의식 심볼들, 십자선)
+                      }} className="w-[216px] h-[216px]" />
+                    </div>
+                  )}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
                     baseColor: '#ff6b35',
                     secondaryColor: '#ffe66d',
                     accentColor: '#4ecdc4'
-                  }} className="w-36 h-36" />}
+                  }} className="w-[180px] h-[180px]" />}
                   {character.species === 'Echo Prism' && <PrismSVG colors={{
                     baseColor: '#20b2aa',
                     secondaryColor: '#87ceeb',
                     accentColor: '#00ced1'
-                  }} className="w-36 h-36" />}
+                  }} className="w-[180px] h-[180px]" />}
                 </div>
               </div>
               <h3 className="text-base mt-4" style={{
