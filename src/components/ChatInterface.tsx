@@ -28,8 +28,8 @@ interface Message {
 
 // 하드코딩된 characterAttributes
 const characterAttributes = {
-  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars"],
-  entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
+  entity: ["Neon Ghost", "Quantum Fairy", "Echo Prism", "Cyber Shaman", "Neural Entity", "Supernova Microbe"],
+  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars", "Arcane Peru"],
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
 
