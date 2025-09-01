@@ -33,6 +33,9 @@ const characterAttributes = {
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
 
+// json 불러오기 (require 방식 추천)
+const characterData: { characters: any[] } = require("../../public/digital_characters_1080.json");
+
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
   const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([]);
@@ -94,9 +97,22 @@ How may I assist your consciousness today?`,
       }));
 
       // 새 사용자 메시지 추가
+      // 첫 메시지라면 chatPersona 포함
+      const isFirstUserMessage = messages.filter(m => m.isUser).length === 0;
+      const personaObj = characterData.characters.find(
+        c => c.entity === character.species &&
+             c.digitalOriginRealm === character.realm &&
+             c.corePersonality === character.personality &&
+             c.age === character.age
+      );
+      const chatPersona = personaObj?.chatPersona || "";
+      const userPrompt = isFirstUserMessage
+        ? `${inputValue}\n---\n${chatPersona}`
+        : inputValue;
+
       conversationHistory.push({
         role: "user",
-        content: currentInput
+        content: userPrompt
       });
 
       // Gradio API 호출
