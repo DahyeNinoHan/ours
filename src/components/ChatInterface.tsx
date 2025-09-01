@@ -28,13 +28,10 @@ interface Message {
 
 // 하드코딩된 characterAttributes
 const characterAttributes = {
-  entity: ["Neon Ghost", "Quantum Fairy", "Echo Prism", "Cyber Shaman", "Neural Entity", "Supernova Microbe"],
-  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars", "Arcane Peru"],
+  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars"],
+  entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
-
-// json 불러오기 (require 방식 추천)
-const characterData: { characters: any[] } = require("../../public/digital_characters_1080.json");
 
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
   const navigate = useNavigate();
@@ -97,22 +94,9 @@ How may I assist your consciousness today?`,
       }));
 
       // 새 사용자 메시지 추가
-      // 첫 메시지라면 chatPersona 포함
-      const isFirstUserMessage = messages.filter(m => m.isUser).length === 0;
-      const personaObj = characterData.characters.find(
-        c => c.entity === character.species &&
-             c.digitalOriginRealm === character.realm &&
-             c.corePersonality === character.personality &&
-             c.age === character.age
-      );
-      const chatPersona = personaObj?.chatPersona || "";
-      const userPrompt = isFirstUserMessage
-        ? `${inputValue}\n---\n${chatPersona}`
-        : inputValue;
-
       conversationHistory.push({
         role: "user",
-        content: userPrompt
+        content: currentInput
       });
 
       // Gradio API 호출
