@@ -185,7 +185,12 @@ Initialized with love in JavaScript ❤️`;
           <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
 
             <div className="flex justify-center">
-              <img src="/title.png" alt="DIGITAL CONSCIOUSNESS GENERATOR v3.0" style={{ width: '50%', height: 'auto' }} />
+              <img
+                src="/title.png"
+                alt="DIGITAL CONSCIOUSNESS GENERATOR v3.0"
+                className="w-10/12 md:w-1/2"
+                style={{ height: 'auto' }}
+              />
             </div>
           </h1>
           {/* <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
