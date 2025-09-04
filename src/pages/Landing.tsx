@@ -27,7 +27,7 @@ const Landing = () => {
       <img
         src="/ours_logo_02.svg"
         alt="Ours Logo"
-        style={{ maxWidth: "60vw", maxHeight: "60vh" }}
+        className="w-[120vw] h-auto max-w-none max-h-none md:w-auto md:max-w-[60vw] md:max-h-[60vh]"
         draggable={false}
       />
     </div>
