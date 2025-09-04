@@ -27,7 +27,7 @@ const Landing = () => {
         className="w-[120vw] h-auto max-w-none max-h-none md:w-auto md:max-w-[60vw] md:max-h-[60vh]"
         style={{
           position: "absolute",
-          top: "50%",
+          top: "35%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           width: "120vw",
