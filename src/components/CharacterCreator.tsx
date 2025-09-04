@@ -188,7 +188,7 @@ Initialized with love in JavaScript ❤️`;
               <img
                 src="/title.png"
                 alt="DIGITAL CONSCIOUSNESS GENERATOR v3.0"
-                className="w-[120%] max-w-[120%] md:w-1/2 md:max-w-1/2"
+                className="w-[105%] max-w-[105%] md:w-1/2 md:max-w-1/2"
                 style={{ height: 'auto' }}
               />
             </div>
