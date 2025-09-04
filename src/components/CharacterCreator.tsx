@@ -126,7 +126,7 @@ Initialized with love in JavaScript ❤️`;
       
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mt-16 mb-24">
+  <div className="text-center mt-16 mb-8">
           <Dialog open={showIncubator} onOpenChange={(open) => {
             setShowIncubator(open);
             if (!open) localStorage.setItem('hasSeenPopup', 'true');
