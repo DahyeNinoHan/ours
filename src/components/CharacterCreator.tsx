@@ -76,7 +76,7 @@ Initialized with love in JavaScript ❤️`;
         <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
           <div className="text-center space-y-16">
             <div className="animate-fade-in">
-                <p className="text-white/80 text-3xl font-mono tracking-[0.1em] mb-24">
+                <p className="text-white/80 text-2xl font-mono tracking-[0.1em] mb-24">
                 Your entity is approaching you...
               </p>
             </div>
@@ -85,31 +85,35 @@ Initialized with love in JavaScript ❤️`;
                 {/* Terminal Flowchart */}
                 <div className="flex flex-col items-center space-y-0">
                   {/* Vertical line */}
-                  <div className="w-px h-16 bg-white/40"></div>
+                  <div className="relative w-px h-48 bg-white/40 overflow-hidden">
+                    <div className="absolute left-0 top-0 w-full h-full animate-flow">
+                      <div className="w-px h-40 bg-gradient-to-b from-transparent via-white/80 to-transparent opacity-80"></div>
+                    </div>
+                  </div>
                   
                   {/* Horizontal split */}
                   <div className="relative flex items-center">
                     {/* Left horizontal line */}
-                    <div className="w-32 h-px bg-white/40"></div>
+                    {/* <div className="w-40 h-px bg-white/40"></div> */}
                     
                     {/* Junction point */}
-                    <div className="w-2 h-2 bg-white/60 rounded-full border border-white/40"></div>
-                    
+                    <div className="w-2 h-2 bg-white/60 rounded-full border border-white/40 mb-10"></div>
+                     
                     {/* Right horizontal line */}
-                    <div className="w-32 h-px bg-white/40"></div>
+                    {/* <div className="w-40 h-px bg-white/40"></div> */}
                   </div>
                   
                   {/* Buttons at the end of lines */}
-                  <div className="flex justify-between w-full max-w-2xl pt-4 gap-x-8">
+                  <div className="flex flex-col items-center w-full max-w-2xl pt-4 gap-y-6">
                      <Button
                        onClick={() => navigate('/chat', { state: { character } })}
-                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
                     >
                       Chat
                     </Button>
                      <Button
                        onClick={() => navigate('/meditation', { state: { character } })}
-                      className="w-full py-10 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-4xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
                     >
                       Meditation
                     </Button>
@@ -213,7 +217,7 @@ Initialized with love in JavaScript ❤️`;
                     baseColor: '#ff69b4',    // 핫 핑크 (몸체 테두리)
                     secondaryColor: '#32cd32', // 라임 그린 (눈동자, 꽃잎)
                     accentColor: '#90ee90'    // 라이트 그린 (날개, 입)
-                  }} className="w-[216px] h-[216px]" />}
+                  }} className="w-[180px] h-[180px]" />}
                   {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
                     baseColor: '#ffd700',     // 골드 (테두리)
                     secondaryColor: '#ff1493', // 딥 핑크 (입, 하단 라인)
