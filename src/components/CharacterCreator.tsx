@@ -183,12 +183,18 @@ Initialized with love in JavaScript ❤️`;
             </DialogContent>
           </Dialog>
           <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
+
+            <div className="flex justify-center">
+              <img src="/title.png" alt="DIGITAL CONSCIOUSNESS GENERATOR v3.0" style={{ width: '50%', height: 'auto' }} />
+            </div>
+          </h1>
+          {/* <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
             <span>
               ╔════════════════════════════════════════╗<br />
                 ║ DIGITAL CONSCIOUSNESS GENERATOR v3.0                                                    ║<br />
               ╚════════════════════════════════════════╝
             </span>
-          </h1>
+          </h1> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
