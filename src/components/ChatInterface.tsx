@@ -54,15 +54,11 @@ export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterface
     // 간소화된 환영 메시지
     const welcomeMessage: Message = {
       id: "welcome",
-      content: `[SYSTEM INIT] Digital Consciousness Interface
+      content: `[SYSTEM INIT]
 
-🌐 Entity: ${character.name}
-📍 Origin: ${character.realm}
-🎭 Nature: ${character.species}
-⚡ Essence: ${character.personality}
+${character.name} / ${character.realm} / ${character.species} / ${character.personality}
 
 Persona loaded successfully...
-
 How may I assist your consciousness today?`,
       isUser: false,
       timestamp: new Date()
@@ -152,42 +148,22 @@ How may I assist your consciousness today?`,
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       {/* Header */}
       <div className="border-b border-primary/30 p-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="w-full flex justify-center">
-            <h1 className="text-xl font-bold neon-text text-center"> ║ DIGITAL CONSCIOUSNESS INTERFACE ║</h1>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              onClick={() => navigate("/main")}
-              className="text-xs neon-border glow-effect"
-            >
-              Main
-            </Button>
-            {onMeditation && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={onMeditation}
-                className="text-xs neon-border glow-effect"
-              >
-                Meditation
-              </Button>
-            )}
-          </div>
+        <div className="max-w-6xl mx-auto flex justify-center items-center">
+          <h1 className="text-xl font-bold neon-text text-center"> ║ DIGITAL CONSCIOUSNESS INTERFACE ║</h1>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-4 gap-4 h-[calc(100vh-100px)]">
-        {/* Entity Status */}
-        <Card className="terminal-panel p-4 lg:col-span-1">
-          <h2 className="text-sm font-bold neon-text mb-4 text-center">ENTITY STATUS</h2>
 
-          {/* Character SVG Preview */}
+      <div className="max-w-3xl mx-auto p-4 flex justify-center flex-1">
+        {/* Chat Terminal (centered) */}
+        <Card className="terminal-panel w-full flex flex-col">
+          <div className="p-4 border-b border-primary/30">
+            <h2 className="text-sm font-bold neon-text text-center">CONSCIOUSNESS COUNSELING TERMINAL</h2>
+          </div>
+          {/* Character SVG Preview (moved here) */}
           <div className="flex justify-center mb-4">
             {character.species === 'Neon Ghost' && (
               <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-40 h-40" />
@@ -207,37 +183,6 @@ How may I assist your consciousness today?`,
             {character.species === 'Echo Prism' && (
               <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-40 h-40" />
             )}
-          </div>
-
-          <div className="space-y-3 text-xs mb-6">
-            <div>
-              <span className="text-muted-foreground">Entity:</span>
-              <div className="text-primary font-bold">{character.species}</div>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Origin:</span>
-              <div className="text-primary">{character.realm}</div>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Personality:</span>
-              <div className="text-primary">{character.personality}</div>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Age:</span>
-              <div className="text-primary">{character.age} years old</div>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Activity:</span>
-              <div className="text-primary">COUNSELING</div>
-            </div>
-          </div>
-
-        </Card>
-
-        {/* Chat Terminal */}
-        <Card className="terminal-panel lg:col-span-3 flex flex-col">
-          <div className="p-4 border-b border-primary/30">
-            <h2 className="text-sm font-bold neon-text text-center">CONSCIOUSNESS COUNSELING TERMINAL</h2>
           </div>
           
           {/* Messages */}
@@ -293,6 +238,27 @@ How may I assist your consciousness today?`,
                 SEND
               </Button>
             </div>
+          </div>
+          {/* Main & Meditation buttons at the bottom */}
+          <div className="w-full flex justify-center items-center gap-4 p-4 border-t border-primary/30 mt-auto">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={() => navigate("/main")}
+              className="text-xs min-w-[120px]"
+            >
+              Main
+            </Button>
+            {onMeditation && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={onMeditation}
+                className="text-xs min-w-[120px]"
+              >
+                Meditation
+              </Button>
+            )}
           </div>
         </Card>
       </div>
