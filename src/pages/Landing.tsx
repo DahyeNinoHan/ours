@@ -22,18 +22,14 @@ const Landing = () => {
       onClick={handleClick}
     >
       <img
-        src="/ours_logo_02.svg"
-        alt="Ours Logo"
-        className="w-[120vw] h-auto max-w-none max-h-none md:w-auto md:max-w-[60vw] md:max-h-[60vh]"
-        style={{
-          position: "absolute",
-          top: "35%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "120vw",
-          height: "auto"
-        }}
-        draggable={false}
+          src="/ours_logo_02.gif"
+          alt="Ours Logo"
+          className="w-[100vw] h-[100vh] object-contain max-w-none max-h-none md:w-auto md:h-auto md:max-w-[60vw] md:max-h-[60vh] md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+          style={{
+            width: "100vw",
+            height: "100vh"
+          }}
+          draggable={false}
       />
     </div>
   );
