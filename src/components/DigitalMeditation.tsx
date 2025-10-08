@@ -204,15 +204,17 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           <div className="flex gap-2 mb-6">
             <Button
               variant="outline"
+              size="sm"
               onClick={() => window.location.assign('/main')}
-              className="neon-border glow-effect self-start"
+              className="text-xs min-w-[120px]"
             >
               Main
             </Button>
             <Button 
               variant="outline" 
+              size="sm"
               onClick={onBack}
-              className="neon-border glow-effect self-start"
+              className="text-xs min-w-[120px]"
             >
               Chat
             </Button>
@@ -337,7 +339,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           <Button
             onClick={resetSession}
             variant="outline"
-            className="neon-border glow-effect px-6 py-4"
+            className="px-6 py-4"
           >
             <RotateCcw className="w-5 h-5 mr-2" />
             Reset

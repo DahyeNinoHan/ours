@@ -514,13 +514,13 @@ Initialized with love in JavaScript ❤️`;
                   <div className="flex flex-col items-center w-full max-w-2xl pt-4 gap-y-6">
                      <Button
                        onClick={() => navigate('/chat', { state: { character } })}
-                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl"
                     >
                       Chat
                     </Button>
                      <Button
                        onClick={() => navigate('/meditation', { state: { character } })}
-                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl hover:shadow-[0_0_16px_4px_#32cd32aa]"
+                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl"
                     >
                       Meditation
                     </Button>
