@@ -26,8 +26,6 @@ const GhostSVG = ({ colors, className }: GhostSVGProps) => (
         </feMerge>
       </filter>
     </defs>
-  {/* Background aura */}
-  <circle cx="100" cy="100" r="85" fill="#110B13" opacity="0.5"/>
   <g transform="translate(100,100) scale(1.0) translate(-100,-100)">
       {/* Main ethereal form */}
       <path 

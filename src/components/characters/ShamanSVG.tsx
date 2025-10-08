@@ -27,8 +27,6 @@ const ShamanSVG = ({ colors, className }: ShamanSVGProps) => {
           </feMerge>
         </filter>
       </defs>
-  {/* Background aura for consistency */}
-  <circle cx="100" cy="100" r="85" fill={colors.baseColor} opacity="0.1"/>
       {/* Shaman hood/cloak */}
       <path 
         d="M100 60 Q80 65 70 85 Q65 105 75 125 Q85 140 100 145 Q115 140 125 125 Q135 105 130 85 Q120 65 100 60" 
