@@ -157,7 +157,7 @@ How may I assist your consciousness today?`,
       </div>
 
 
-      <div className="max-w-3xl mx-auto p-4 flex justify-center flex-1">
+      <div className="max-w-4xl w-full mx-auto p-4 flex justify-center flex-1" style={{ minWidth: '800px' }}>
         {/* Chat Terminal (centered) */}
         <Card className="terminal-panel w-full flex flex-col">
           <div className="p-4 border-b border-primary/30">
