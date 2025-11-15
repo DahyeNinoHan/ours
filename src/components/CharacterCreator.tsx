@@ -99,7 +99,7 @@ export const CharacterCreator = ({
       'Void Station': '#7F7F7F',
       'Cosmic Hawaii': '#9b59b6',
       'Arcane Peru': '#66ff33c1',
-      'Elon Mars': '#ffaa00'
+      'X-Mars': '#ffaa00'
     };
     return realmColorMap[realm] || '#2D2A4A'; // Default color if realm not found
   };

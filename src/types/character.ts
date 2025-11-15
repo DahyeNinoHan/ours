@@ -2,7 +2,7 @@ export interface Character {
   name: string;
   age: number;
   species: "Neon Ghost" | "Quantum Fairy" | "Neural Entity" | "Supernova Microbe" | "Cyber Shaman" | "Echo Prism";
-  realm: "Auroral Rainbow" | "K-Galaxloop" | "Void Station" | "Cosmic Hawaii" | "Elon Mars" | "Arcane Peru";
+  realm: "Auroral Rainbow" | "K-Galaxloop" | "Void Station" | "Cosmic Hawaii" | "X-Mars" | "Arcane Peru";
   personality: "Pioneer" | "Optimistic" | "Fumble" | "Insight" | "Sassy" | "Cautious";
   description: string;
   image: string;
@@ -40,8 +40,8 @@ export const DIGITAL_REALMS = {
     story: "The quiet space between servers where deleted thoughts find peace and recursive contemplation flows eternal",
     color: "#9370db"
   },
-  "Elon Mars": {
-    name: "Elon Mars",
+  "X-Mars": {
+    name: "X-Mars",
     description: "Liquid information ocean with JavaScript-speaking dolphins and wave-surfing reality processing",
     story: "An endless digital sea where information flows like tides and consciousness swims through streaming currents",
     color: "#00ced1"

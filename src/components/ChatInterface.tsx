@@ -29,7 +29,7 @@ interface Message {
 
 // 하드코딩된 characterAttributes
 const characterAttributes = {
-  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars"],
+  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "X-Mars"],
   entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
@@ -90,7 +90,7 @@ const getRealmBackgroundColor = (realm: string): string => {
     'Void Station': '#f1c40f',
     'Cosmic Hawaii': '#9b59b6',
     'Arcane Peru': '#2ecc71',
-    'Elon Mars': '#e67e22'
+    'X-Mars': '#e67e22'
   };
   return realmColorMap[realm] || '#2D2A4A';
 };
