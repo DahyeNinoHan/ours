@@ -92,6 +92,18 @@ export const CharacterCreator = ({
   ];
 
   // Helper Functions
+  const getRealmBackgroundColor = (realm: string): string => {
+    const realmColorMap: Record<string, string> = {
+      'Auroral Rainbow': '#e91e63',
+      'K-Galaxloop': '#3498db',
+      'Void Station': '#f1c40f',
+      'Cosmic Hawaii': '#9b59b6',
+      'Arcane Peru': '#2ecc71',
+      'Elon Mars': '#e67e22'
+    };
+    return realmColorMap[realm] || '#2D2A4A'; // Default color if realm not found
+  };
+
   const mapToOriginalRange = (age: number): number => {
     // Map from slider range (-3999817093 to 3920896199) to cosmic range (-40 to 40)
     const sliderMin = -3999817093;
@@ -730,7 +742,14 @@ Initialized with love in JavaScript ❤️`;
                 } as React.CSSProperties}
               >
                 {/* Background container */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#2D2A4A]/40 to-[#1A1A2E]/60" style={{zIndex: 1}} />
+                <div 
+                  className="absolute inset-0 rounded-xl" 
+                  style={{
+                    zIndex: 1, 
+                    backgroundColor: getRealmBackgroundColor(character.realm),
+                    opacity: 0.6
+                  }} 
+                />
                 
                 {/* Inner background circle */}
                 <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#16213E] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
