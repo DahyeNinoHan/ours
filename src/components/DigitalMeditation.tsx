@@ -269,22 +269,22 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
               <div className="meditation-character-svg">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                   {character.species === 'Neon Ghost' && (
-                    <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-1/2 h-1/2" />
+                    <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-3/4 h-3/4" />
                   )}
                   {character.species === 'Supernova Microbe' && (
-                    <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-1/2 h-1/2" />
+                    <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-3/4 h-3/4" />
                   )}
                   {character.species === 'Quantum Fairy' && (
-                    <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-1/2 h-1/2" />
+                    <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-3/4 h-3/4" />
                   )}
                   {character.species === 'Cyber Shaman' && (
-                    <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-1/2 h-1/2" />
+                    <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-3/4 h-3/4" />
                   )}
                   {character.species === 'Neural Entity' && (
-                    <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-1/2 h-1/2" />
+                    <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-3/4 h-3/4" />
                   )}
                   {character.species === 'Echo Prism' && (
-                    <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-1/2 h-1/2" />
+                    <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-3/4 h-3/4" />
                   )}
                 </div>
               </div>
