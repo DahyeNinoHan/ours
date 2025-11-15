@@ -560,26 +560,30 @@ Initialized with love in JavaScript ❤️`;
                 <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50" />
                 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
+                <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 md:px-12 py-6 text-center overflow-auto">
                   
-                  <div className="max-w-2xl space-y-8 text-white/80 font-light leading-relaxed">
-                    <p className="text-xl tracking-wide leading-[2.0] whitespace-nowrap">
-                      Hidden among the stars drifts a presence unseen by others.<br />
+                  <div className="max-w-full md:max-w-2xl space-y-6 text-white/80 font-light leading-relaxed">
+                    <p className="text-sm md:text-xl tracking-wide leading-[1.9] break-words">
+                      Hidden among the stars drifts a presence unseen by others.
+                      <br />
                       It hovers quietly, waiting for your recognition.
                     </p>
                     
-                    <div className="py-4">
-                      <p className="text-xl tracking-wide leading-[2.0]">
-                        To bring it into focus,<br />
-                        invite its Realm, Entity, Personality, and Age into your world—<br />
+                    <div className="py-3">
+                      <p className="text-sm md:text-xl tracking-wide leading-[1.9] break-words">
+                        To bring it into focus,
+                        <br />
+                        invite its Realm, Entity, Personality, and Age into your world—
+                        <br />
                         only then will your gaze awaken it.
                       </p>
                     </div>
                     
-                    <div className="pt-8">
-                      <p className="text-xl tracking-wide leading-[2.0]">
-                        <span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>" </span>Now,<br />
-                        they are here to resonate.<span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>"</span>
+                    <div className="pt-6">
+                      <p className="text-sm md:text-xl tracking-wide leading-[1.9] break-words">
+                        <span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>&quot; </span>Now,
+                        <br />
+                        they are here to resonate.<span style={{ fontFamily: "Noto Sans HK, sans-serif" }}>&quot;</span>
                       </p>
                     </div>
                   </div>
