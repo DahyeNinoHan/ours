@@ -449,16 +449,23 @@ How may I assist your consciousness today?`,
                 '--cosmic-glow-color': getCosmicPhase(mapToOriginalRange(character.age)).glowColor
               } as React.CSSProperties}
             >
-              {/* Background container with realm color */}
-              <div 
-                className="absolute inset-0 rounded-xl" 
+              {/* Circular background container centered behind character (matches CharacterCreator) */}
+              <div
+                className="absolute left-1/2 top-1/2 rounded-full"
                 style={{
-                  zIndex: 1, 
+                  zIndex: 1,
+                  width: 180,
+                  height: 180,
+                  transform: 'translate(-50%, -50%)',
                   backgroundColor: getRealmBackgroundColor(character.realm),
-                  opacity: 0.6
-                }} 
+                  opacity: 0.20,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '50%'
+                }}
               />
-              
+
               {/* Inner background circle */}
               <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#16213E] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
               

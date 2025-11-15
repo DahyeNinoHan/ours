@@ -96,10 +96,10 @@ export const CharacterCreator = ({
     const realmColorMap: Record<string, string> = {
       'Auroral Rainbow': '#e91e63',
       'K-Galaxloop': '#3498db',
-      'Void Station': '#f1c40f',
+      'Void Station': '#7F7F7F',
       'Cosmic Hawaii': '#9b59b6',
-      'Arcane Peru': '#2ecc71',
-      'Elon Mars': '#e67e22'
+      'Arcane Peru': '#66ff33c1',
+      'Elon Mars': '#ffaa00'
     };
     return realmColorMap[realm] || '#2D2A4A'; // Default color if realm not found
   };
@@ -741,16 +741,23 @@ Initialized with love in JavaScript ❤️`;
                   '--cosmic-glow-color': getCosmicPhase(cosmicAge).glowColor
                 } as React.CSSProperties}
               >
-                {/* Background container */}
-                <div 
-                  className="absolute inset-0 rounded-xl" 
+                {/* Circular background container centered behind character */}
+                <div
+                  className="absolute left-1/2 top-1/2 rounded-full"
                   style={{
-                    zIndex: 1, 
+                    zIndex: 1,
+                    width: 180,
+                    height: 180,
+                    transform: 'translate(-50%, -50%)',
                     backgroundColor: getRealmBackgroundColor(character.realm),
-                    opacity: 0.6
-                  }} 
+                    opacity: 0.20,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: '50%'
+                  }}
                 />
-                
+
                 {/* Inner background circle */}
                 <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#16213E] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
                 
