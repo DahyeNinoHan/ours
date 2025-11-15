@@ -458,7 +458,7 @@ Initialized with love in JavaScript ❤️`;
 
     const apply = (e: MediaQueryList | MediaQueryListEvent) => {
       if (e.matches) {
-        document.documentElement.style.fontSize = '90%';
+        document.documentElement.style.fontSize = '80%';
       } else {
         document.documentElement.style.fontSize = prevFontSize;
       }
