@@ -449,6 +449,44 @@ Initialized with love in JavaScript ❤️`;
       color: speciesObj.color
     }));
   }, [character.age, character.realm, character.species, character.personality]);
+  
+  // Reduce root font-size on mobile while this page is mounted so all rem-based sizes scale down
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 767px)');
+    const prevFontSize = document.documentElement.style.fontSize || '';
+
+    const apply = (e: MediaQueryList | MediaQueryListEvent) => {
+      if (e.matches) {
+        document.documentElement.style.fontSize = '90%';
+      } else {
+        document.documentElement.style.fontSize = prevFontSize;
+      }
+    };
+
+    // Initial apply
+    apply(mq as MediaQueryList);
+    // Listen for changes
+    try {
+      mq.addEventListener('change', apply as EventListener);
+    } catch {
+      // Safari fallback
+      // @ts-ignore
+      mq.addListener(apply as any);
+    }
+
+    return () => {
+      // restore previous font-size
+      document.documentElement.style.fontSize = prevFontSize;
+      try {
+        mq.removeEventListener('change', apply as EventListener);
+      } catch {
+        // Safari fallback
+        // @ts-ignore
+        mq.removeListener(apply as any);
+      }
+    };
+  }, []);
   const handleSliderChange = (field: string, value: number[]) => {
     setCharacter(prev => ({
       ...prev,
