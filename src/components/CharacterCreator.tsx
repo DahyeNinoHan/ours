@@ -738,8 +738,9 @@ Initialized with love in JavaScript ❤️`;
               <div 
                 className={`relative mb-4 flex items-center justify-center ${styles.characterPreview} ${getCosmicPhase(cosmicAge).className}`}
                 style={{
-                  width: 'min(36vw, 180px)',
-                  height: 'min(36vw, 180px)',
+                  width: 'min(180px, calc(100vw - 32px))',
+                  height: 'min(180px, calc(100vw - 32px))',
+                  boxSizing: 'border-box',
                   '--cosmic-glow-color': getCosmicPhase(cosmicAge).glowColor
                 } as React.CSSProperties}
               >

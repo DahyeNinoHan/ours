@@ -446,8 +446,9 @@ How may I assist your consciousness today?`,
             <div 
               className={`relative flex items-center justify-center ${styles.characterPreview} ${getCosmicPhase(mapToOriginalRange(character.age)).className}`}
               style={{
-                width: 'min(36vw, 180px)',
-                height: 'min(36vw, 180px)',
+                width: 'min(180px, calc(100vw - 32px))',
+                height: 'min(180px, calc(100vw - 32px))',
+                boxSizing: 'border-box',
                 '--cosmic-glow-color': getCosmicPhase(mapToOriginalRange(character.age)).glowColor
               } as React.CSSProperties}
             >
