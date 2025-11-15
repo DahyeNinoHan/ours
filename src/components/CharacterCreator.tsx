@@ -736,24 +736,19 @@ Initialized with love in JavaScript ❤️`;
           }} />
             <div className="flex flex-col items-center mb-6">
               <div 
-                className={`relative w-[180px] h-[180px] mb-4 flex items-center justify-center ${styles.characterPreview} ${getCosmicPhase(cosmicAge).className}`}
+                className={`relative w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[180px] md:h-[180px] mb-4 flex items-center justify-center ${styles.characterPreview} ${getCosmicPhase(cosmicAge).className}`}
                 style={{
                   '--cosmic-glow-color': getCosmicPhase(cosmicAge).glowColor
                 } as React.CSSProperties}
               >
                 {/* Circular background container centered behind character */}
                 <div
-                  className="absolute left-1/2 top-1/2 rounded-full"
+                  className="absolute left-1/2 top-1/2 rounded-full w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[180px] md:h-[180px]"
                   style={{
                     zIndex: 1,
-                    width: 180,
-                    height: 180,
                     transform: 'translate(-50%, -50%)',
                     backgroundColor: getRealmBackgroundColor(character.realm),
                     opacity: 0.20,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                     borderRadius: '50%'
                   }}
                 />
@@ -781,36 +776,36 @@ Initialized with love in JavaScript ❤️`;
                     baseColor: '#e91e63',     
                     secondaryColor: '#3498db',
                     accentColor: '#f1c40f'    
-                  }} className="w-[160px] h-[160px]" />}
+                  }} className="w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]" />}
                   {character.species === 'Supernova Microbe' && <MicrobeSVG colors={{
                     baseColor: '#ff69b4',
                     secondaryColor: '#32cd32',
                     accentColor: '#90ee90'
-                  }} className="w-[140px] h-[140px]" />}
+                  }} className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px]" />}
                   {character.species === 'Quantum Fairy' && <QuantumSVG colors={{
                     baseColor: '#ffd700',
                     secondaryColor: '#ff1493',
                     accentColor: '#00bfff'
-                  }} className="w-[160px] h-[160px]" />}
+                  }} className="w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]" />}
                   {character.species === 'Cyber Shaman' && (
                     <div style={{position: 'relative', top: '-6px'}}>
                       <ShamanSVG colors={{
                         baseColor: '#9b59b6',
                         secondaryColor: '#e91e63',
                         accentColor: '#f39c12'
-                      }} className="w-[160px] h-[160px]" />
+                      }} className="w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]" />
                     </div>
                   )}
                   {character.species === 'Neural Entity' && <NeuralSVG colors={{
                     baseColor: '#ff6b35',
                     secondaryColor: '#ffe66d',
                     accentColor: '#4ecdc4'
-                  }} className="w-[140px] h-[140px]" />}
+                  }} className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px]" />}
                   {character.species === 'Echo Prism' && <PrismSVG colors={{
                     baseColor: '#20b2aa',
                     secondaryColor: '#87ceeb',
                     accentColor: '#00ced1'
-                  }} className="w-[140px] h-[140px]" />}
+                  }} className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px]" />}
                 </div>
               </div>
               
