@@ -12,6 +12,7 @@ import PrismSVG from "./characters/PrismSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
+import styles from './CharacterCreator.module.css';
 
 interface ChatInterfaceProps {
   character: Character;
@@ -31,6 +32,283 @@ const characterAttributes = {
   digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "Elon Mars"],
   entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
+};
+
+// Cosmic Phase Interfaces
+interface CosmicPhase {
+  name: string;
+  minAge: number;
+  maxAge: number;
+  glowColor: string;
+  className: string;
+}
+
+// Cosmic Phases Configuration
+const COSMIC_PHASES: CosmicPhase[] = [
+  {
+    name: "Primordial Nebula",
+    minAge: -40,
+    maxAge: -10,
+    glowColor: "#663399",
+    className: "phase-nebula"
+  },
+  {
+    name: "Main Sequence Star",
+    minAge: -10,
+    maxAge: 0,
+    glowColor: "#4169e1",
+    className: "phase-mainsequence"
+  },
+  {
+    name: "Red Supergiant",
+    minAge: 0,
+    maxAge: 15,
+    glowColor: "#ff4500",
+    className: "phase-redgiant"
+  },
+  {
+    name: "Supernova",
+    minAge: 15,
+    maxAge: 25,
+    glowColor: "#ff6b35",
+    className: "phase-supernova"
+  },
+  {
+    name: "Black Hole",
+    minAge: 25,
+    maxAge: 40,
+    glowColor: "#9400d3",
+    className: "phase-blackhole"
+  }
+];
+
+// Helper Functions
+const getRealmBackgroundColor = (realm: string): string => {
+  const realmColorMap: Record<string, string> = {
+    'Auroral Rainbow': '#e91e63',
+    'K-Galaxloop': '#3498db',
+    'Void Station': '#f1c40f',
+    'Cosmic Hawaii': '#9b59b6',
+    'Arcane Peru': '#2ecc71',
+    'Elon Mars': '#e67e22'
+  };
+  return realmColorMap[realm] || '#2D2A4A';
+};
+
+const mapToOriginalRange = (age: number): number => {
+  const sliderMin = -3999817093;
+  const sliderMax = 3920896199;
+  const cosmicMin = -40;
+  const cosmicMax = 40;
+  
+  const normalizedAge = (age - sliderMin) / (sliderMax - sliderMin);
+  return cosmicMin + normalizedAge * (cosmicMax - cosmicMin);
+};
+
+const getCosmicPhase = (mappedAge: number): CosmicPhase => {
+  return COSMIC_PHASES.find(phase => 
+    mappedAge >= phase.minAge && mappedAge < phase.maxAge
+  ) || COSMIC_PHASES[COSMIC_PHASES.length - 1];
+};
+
+const getPhaseProgress = (mappedAge: number, phase: CosmicPhase): number => {
+  const phaseRange = phase.maxAge - phase.minAge;
+  const ageInPhase = mappedAge - phase.minAge;
+  return Math.max(0, Math.min(1, ageInPhase / phaseRange));
+};
+
+// Cosmic Evolution Generators
+const generateNebula = (progress: number, baseColor: string): JSX.Element => {
+  const numClouds = Math.floor(3 + progress * 2);
+  const centerX = 100;
+  const centerY = 45;
+  
+  return (
+    <g className={styles.nebula}>
+      {[...Array(numClouds)].map((_, i) => (
+        <circle
+          key={i}
+          cx={centerX + Math.cos(i * 2 * Math.PI / numClouds) * 12}
+          cy={centerY + Math.sin(i * 2 * Math.PI / numClouds) * 12}
+          r={8 + progress * 4}
+          fill="#663399"
+          opacity={0.3 + progress * 0.2}
+        />
+      ))}
+    </g>
+  );
+};
+
+const generateMainSequenceStar = (progress: number, baseColor: string): JSX.Element => {
+  const coreSize = 6 + progress * 3;
+  const centerX = 100;
+  const centerY = 45;
+  
+  return (
+    <g className={styles.mainSequenceStar}>
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={coreSize}
+        fill="#4169e1"
+        opacity={0.8}
+      />
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={coreSize * 1.5}
+        fill="none"
+        stroke="#4169e1"
+        strokeWidth="1.5"
+        opacity={0.5 - progress * 0.2}
+      />
+    </g>
+  );
+};
+
+const generateRedGiant = (progress: number, baseColor: string): JSX.Element => {
+  const giantSize = 10 + progress * 5;
+  const centerX = 100;
+  const centerY = 45;
+  
+  return (
+    <g className={styles.redGiant}>
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={giantSize}
+        fill="#ff4500"
+        opacity={0.7}
+      />
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={giantSize * 1.3}
+        fill="none"
+        stroke="#ff6347"
+        strokeWidth="2"
+        opacity={0.4}
+      />
+    </g>
+  );
+};
+
+const generateSupernova = (progress: number, baseColor: string): JSX.Element => {
+  const explosionSize = 12 + progress * 8;
+  const rayLength = 15 + progress * 10;
+  const centerX = 100;
+  const centerY = 45;
+  
+  return (
+    <g className={styles.supernova}>
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={explosionSize}
+        fill="#ff6b35"
+        opacity={0.8 - progress * 0.4}
+      />
+      {[...Array(8)].map((_, i) => (
+        <line
+          key={i}
+          x1={centerX}
+          y1={centerY}
+          x2={centerX + Math.cos(i * Math.PI / 4) * rayLength}
+          y2={centerY + Math.sin(i * Math.PI / 4) * rayLength}
+          stroke="#ffff00"
+          strokeWidth="1.5"
+          opacity={0.6 - progress * 0.3}
+        />
+      ))}
+    </g>
+  );
+};
+
+const generateBlackHole = (progress: number, baseColor: string): JSX.Element => {
+  const eventHorizonSize = 8 + progress * 4;
+  const accretionRx = 16 + progress * 8;
+  const numParticles = Math.floor(6 + progress * 4);
+  const centerX = 100;
+  const centerY = 45;
+  
+  return (
+    <g>
+      <g className={styles.blackhole}>
+        <ellipse
+          cx={centerX}
+          cy={centerY}
+          rx={accretionRx}
+          ry={accretionRx * 0.3}
+          fill="none"
+          stroke="#ff6b35"
+          strokeWidth="2"
+          opacity={0.7}
+        />
+        <ellipse
+          cx={centerX}
+          cy={centerY}
+          rx={accretionRx * 0.75}
+          ry={accretionRx * 0.2}
+          fill="none"
+          stroke="#ffaa00"
+          strokeWidth="1.5"
+          opacity={0.5}
+        />
+        <circle
+          cx={centerX}
+          cy={centerY}
+          r={eventHorizonSize * 2.5}
+          fill="none"
+          stroke="#4a0080"
+          strokeWidth="1"
+          strokeDasharray="3,3"
+          opacity={0.3}
+        />
+        <circle
+          cx={centerX}
+          cy={centerY}
+          r={eventHorizonSize}
+          fill="#000000"
+          stroke="#1a0d26"
+          strokeWidth="1"
+          opacity={0.9}
+        />
+      </g>
+      
+      {[...Array(numParticles)].map((_, i) => (
+        <circle
+          key={i}
+          cx={centerX + Math.cos(i * 2 * Math.PI / numParticles) * (accretionRx * 1.5)}
+          cy={centerY + Math.sin(i * 2 * Math.PI / numParticles) * (accretionRx * 1.5)}
+          r={0.5 + progress * 1}
+          fill="#9400d3"
+          opacity={0.4 + Math.sin(Date.now() * 0.001 + i) * 0.2}
+          className={styles.floatingParticle}
+          style={{ animationDelay: `${i * 0.4}s` }}
+        />
+      ))}
+    </g>
+  );
+};
+
+const generateCosmicEvolution = (mappedAge: number, baseColor: string): JSX.Element => {
+  const currentPhase = getCosmicPhase(mappedAge);
+  const progress = getPhaseProgress(mappedAge, currentPhase);
+
+  switch (currentPhase.name) {
+    case 'Primordial Nebula':
+      return generateNebula(progress, baseColor);
+    case 'Main Sequence Star':
+      return generateMainSequenceStar(progress, baseColor);
+    case 'Red Supergiant':
+      return generateRedGiant(progress, baseColor);
+    case 'Supernova':
+      return generateSupernova(progress, baseColor);
+    case 'Black Hole':
+      return generateBlackHole(progress, baseColor);
+    default:
+      return <g />;
+  }
 };
 
 export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterfaceProps) => {
@@ -164,25 +442,64 @@ How may I assist your consciousness today?`,
             <h2 className="text-sm font-bold neon-text text-center">CONSCIOUSNESS COUNSELING TERMINAL</h2>
           </div>
           {/* Character SVG Preview (moved here) */}
-          <div className="flex justify-center mb-4">
-            {character.species === 'Neon Ghost' && (
-              <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-40 h-40" />
-            )}
-            {character.species === 'Supernova Microbe' && (
-              <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-40 h-40" />
-            )}
-            {character.species === 'Quantum Fairy' && (
-              <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-40 h-40" />
-            )}
-            {character.species === 'Cyber Shaman' && (
-              <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-40 h-40" />
-            )}
-            {character.species === 'Neural Entity' && (
-              <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-40 h-40" />
-            )}
-            {character.species === 'Echo Prism' && (
-              <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-40 h-40" />
-            )}
+          <div className="flex justify-center mb-4 p-4">
+            <div 
+              className={`relative w-[180px] h-[180px] flex items-center justify-center ${styles.characterPreview} ${getCosmicPhase(mapToOriginalRange(character.age)).className}`}
+              style={{
+                '--cosmic-glow-color': getCosmicPhase(mapToOriginalRange(character.age)).glowColor
+              } as React.CSSProperties}
+            >
+              {/* Background container with realm color */}
+              <div 
+                className="absolute inset-0 rounded-xl" 
+                style={{
+                  zIndex: 1, 
+                  backgroundColor: getRealmBackgroundColor(character.realm),
+                  opacity: 0.6
+                }} 
+              />
+              
+              {/* Inner background circle */}
+              <div className="absolute left-1/2 top-1/2 w-50 h-50 rounded-full bg-[#16213E] flex items-center justify-center" style={{transform: 'translate(-50%, -50%)', zIndex: 2}} />
+              
+              {/* Cosmic Evolution Effects */}
+              <div className={`absolute inset-0 ${styles.cosmicOverlay}`} style={{zIndex: 3}}>
+                <svg viewBox="0 0 200 200" className="w-full h-full">
+                  {generateCosmicEvolution(mapToOriginalRange(character.age), character.color)}
+                </svg>
+              </div>
+              
+              {/* Character SVG with cosmic glow */}
+              <div 
+                className={`absolute left-1/2 top-1/2 ${styles.glowEffect}`}
+                style={{
+                  transform: 'translate(-50%, -50%)', 
+                  zIndex: 4,
+                  '--cosmic-glow-color': getCosmicPhase(mapToOriginalRange(character.age)).glowColor
+                } as React.CSSProperties}
+              >
+                {character.species === 'Neon Ghost' && (
+                  <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-[160px] h-[160px]" />
+                )}
+                {character.species === 'Supernova Microbe' && (
+                  <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-[140px] h-[140px]" />
+                )}
+                {character.species === 'Quantum Fairy' && (
+                  <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-[160px] h-[160px]" />
+                )}
+                {character.species === 'Cyber Shaman' && (
+                  <div style={{position: 'relative', top: '-6px'}}>
+                    <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-[160px] h-[160px]" />
+                  </div>
+                )}
+                {character.species === 'Neural Entity' && (
+                  <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-[160px] h-[160px]" />
+                )}
+                {character.species === 'Echo Prism' && (
+                  <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-[160px] h-[160px]" />
+                )}
+              </div>
+            </div>
           </div>
           
           {/* Messages */}
