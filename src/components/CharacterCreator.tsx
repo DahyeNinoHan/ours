@@ -610,6 +610,110 @@ Initialized with love in JavaScript ❤️`;
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Configuration Matrix */}
+          <Card className="terminal-panel p-6">
+            <h2 className="text-lg font-bold neon-text mb-4 text-center">CONSCIOUSNESS CONFIGURATION MATRIX</h2>
+            
+            <div className="space-y-6">
+              {/* Cosmic Age Slider */}
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <label className="text-sm font-medium">Cosmic Age (Billion Years):</label>
+                  <span className="text-accent font-bold">{cosmicAge.toFixed(1)}B</span>
+                </div>
+                <Slider 
+                  value={[character.age]} 
+                  onValueChange={handleCosmicAgeChange} 
+                  max={3920896199} 
+                  min={-3999817093} 
+                  step={1000000}
+                  className="w-full" 
+                />
+                <div className="text-xs text-muted-foreground mt-1 flex justify-between">
+                  <span>-40B (Primordial Nebula)</span>
+                  <span>+40B (Black Hole)</span>
+                </div>
+                <div className="text-xs text-center mt-1">
+                  <span className="text-accent">Phase: {getCosmicPhase(cosmicAge).name}</span>
+                </div>
+              </div>
+
+                            {/* Entity Species */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Entity Species:</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {Object.keys(ENTITY_SPECIES).map(species => (
+                    <Button
+                      key={species}
+                      variant={character.species === species ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('species', species)}
+                      className={`text-xs h-8 ${character.species === species
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
+                      {species}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Digital Origin Realm */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Digital Origin Realm:</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {Object.keys(DIGITAL_REALMS).map(realm => (
+                    <Button
+                      key={realm}
+                      variant={character.realm === realm ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('realm', realm)}
+                      className={`text-xs h-8 ${character.realm === realm
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
+                      {realm}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Core Personality */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Core Personality:</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {Object.keys(PERSONALITY_TRAITS).map(personality => (
+                    <Button
+                      key={personality}
+                      variant={character.personality === personality ? "default" : "secondary"}
+                      size="sm"
+                      onClick={() => handleOptionSelect('personality', personality)}
+                      className={`text-xs h-8 ${character.personality === personality
+                        ? 'bg-[#E69F01] text-black'
+                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
+                      `}
+                    >
+                      {personality}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Randomize Button */}
+              <div className="pt-4">
+                <Button 
+                  variant="outline" 
+                  onClick={randomizeEntity}
+                  className="w-full glow-effect"
+                >
+                  🎲 RANDOMIZE ENTITY CONFIGURATION
+                </Button>
+              </div>
+            </div>
+          </Card>
+
           {/* Entity Preview */}
           <Card className="terminal-panel p-6">
             <h2 className="text-lg font-bold mb-4 text-center" style={{
@@ -713,110 +817,6 @@ Initialized with love in JavaScript ❤️`;
              >
               MEDITATION
              </Button> */}
-          </Card>
-
-          {/* Configuration Matrix */}
-          <Card className="terminal-panel p-6">
-            <h2 className="text-lg font-bold neon-text mb-4 text-center">CONSCIOUSNESS CONFIGURATION MATRIX</h2>
-            
-            <div className="space-y-6">
-              {/* Cosmic Age Slider */}
-              <div>
-                <div className="flex justify-between items-center mb-2">
-                  <label className="text-sm font-medium">Cosmic Age (Billion Years):</label>
-                  <span className="text-accent font-bold">{cosmicAge.toFixed(1)}B</span>
-                </div>
-                <Slider 
-                  value={[character.age]} 
-                  onValueChange={handleCosmicAgeChange} 
-                  max={3920896199} 
-                  min={-3999817093} 
-                  step={1000000}
-                  className="w-full" 
-                />
-                <div className="text-xs text-muted-foreground mt-1 flex justify-between">
-                  <span>-40B (Primordial Nebula)</span>
-                  <span>+40B (Black Hole)</span>
-                </div>
-                <div className="text-xs text-center mt-1">
-                  <span className="text-accent">Phase: {getCosmicPhase(cosmicAge).name}</span>
-                </div>
-              </div>
-
-                            {/* Entity Species */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Entity Species:</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(ENTITY_SPECIES).map(species => (
-                    <Button
-                      key={species}
-                      variant={character.species === species ? "default" : "secondary"}
-                      size="sm"
-                      onClick={() => handleOptionSelect('species', species)}
-                      className={`text-xs h-8 ${character.species === species
-                        ? 'bg-[#E69F01] text-black'
-                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}
-                    >
-                      {species}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Digital Origin Realm */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Digital Origin Realm:</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(DIGITAL_REALMS).map(realm => (
-                    <Button
-                      key={realm}
-                      variant={character.realm === realm ? "default" : "secondary"}
-                      size="sm"
-                      onClick={() => handleOptionSelect('realm', realm)}
-                      className={`text-xs h-8 ${character.realm === realm
-                        ? 'bg-[#E69F01] text-black'
-                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}
-                    >
-                      {realm}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Core Personality */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Core Personality:</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.keys(PERSONALITY_TRAITS).map(personality => (
-                    <Button
-                      key={personality}
-                      variant={character.personality === personality ? "default" : "secondary"}
-                      size="sm"
-                      onClick={() => handleOptionSelect('personality', personality)}
-                      className={`text-xs h-8 ${character.personality === personality
-                        ? 'bg-[#E69F01] text-black'
-                        : 'bg-[#0A0A0A] border border-[#0FE607] text-[#0FE607]'}
-                      `}
-                    >
-                      {personality}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Randomize Button */}
-              <div className="pt-4">
-                <Button 
-                  variant="outline" 
-                  onClick={randomizeEntity}
-                  className="w-full glow-effect"
-                >
-                  🎲 RANDOMIZE ENTITY CONFIGURATION
-                </Button>
-              </div>
-            </div>
           </Card>
         </div>
       </div>
