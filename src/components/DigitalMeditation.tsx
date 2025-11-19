@@ -201,7 +201,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       {/* Header + Session stats row */}
       <div className="relative z-10 px-4 pb-4 pt-1.5 md:p-6">
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 mb-8">
-          <div className="flex gap-2 mb-6">
+          <div className="flex gap-2 mb-6 justify-center md:justify-start">
             <Button
               variant="outline"
               size="sm"
