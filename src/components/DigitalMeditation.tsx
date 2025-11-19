@@ -199,7 +199,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
       <div className={`absolute inset-0 bg-gradient-radial ${currentStyle.gradient}`} />
 
       {/* Header + Session stats row */}
-      <div className="relative z-10 p-4 md:p-6">
+      <div className="relative z-10 px-4 pb-4 pt-1.5 md:p-6">
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 mb-8">
           <div className="flex gap-2 mb-6">
             <Button
