@@ -223,19 +223,19 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           <div className="grid grid-cols-3 gap-4 w-full max-w-md">
             <Card className="bg-transparent border-none shadow-none">
               <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
-                <div className="text-2xl font-bold neon-text">{formatTime(sessionTime)}</div>
+                <div className="text-l font-bold neon-text">{formatTime(sessionTime)}</div>
                 <div className="text-xs text-muted-foreground">Session Time</div>
               </CardContent>
             </Card>
             <Card className="bg-transparent border-none shadow-none">
               <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
-                <div className="text-2xl font-bold neon-text">{completedCycles}</div>
+                <div className="text-l font-bold neon-text">{completedCycles}</div>
                 <div className="text-xs text-muted-foreground">Cycles</div>
               </CardContent>
             </Card>
             <Card className="bg-transparent border-none shadow-none">
               <CardContent className="p-4 text-center bg-transparent border-none shadow-none">
-                <div className="text-2xl font-bold neon-text">
+                <div className="text-l font-bold neon-text">
                   {Math.round((completedCycles * 19) / 60 * 10) / 10}
                 </div>
                 <div className="text-xs text-muted-foreground">Focus Minutes</div>

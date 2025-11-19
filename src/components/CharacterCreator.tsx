@@ -581,9 +581,9 @@ Initialized with love in JavaScript ❤️`;
         </div>
       )}
       
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-  <div className="text-center mt-16 mb-8">
+  <div className="max-w-7xl mx-auto">
+    {/* Header */}
+  <div className="text-center mt-8 mb-8">
           <Dialog open={showIncubator} onOpenChange={(open) => {
             setShowIncubator(open);
             if (!open) localStorage.setItem('hasSeenPopup', 'true');
@@ -643,7 +643,7 @@ Initialized with love in JavaScript ❤️`;
               </div>
             </DialogContent>
           </Dialog>
-          <h1 className="text-2xl font-bold neon-text tracking-wider mt-8">
+          <h1 className="text-2xl font-bold neon-text tracking-wider mt-2">
 
             <div className="flex justify-center">
               <img

@@ -29,7 +29,7 @@ interface Message {
 
 // 하드코딩된 characterAttributes
 const characterAttributes = {
-  digitalOriginRealm: ["Auroral Rainbow", "Void Station", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "X-Mars"],
+  digitalOriginRealm: ["Auroral Rainbow", "Arcane Peru", "Void Station", "K-Galaxloop", "Cosmic Hawaii", "X-Mars"],
   entity: ["Neon Ghost", "Quantum Fairy", "Neural Entity", "Supernova Microbe", "Cyber Shaman", "Neural Entity"],
   corePersonality: ["Pioneer", "Optimistic", "Fumble", "Insight", "Sassy", "Cautious"]
 };
@@ -85,12 +85,12 @@ const COSMIC_PHASES: CosmicPhase[] = [
 // Helper Functions
 const getRealmBackgroundColor = (realm: string): string => {
   const realmColorMap: Record<string, string> = {
-    'Auroral Rainbow': '#e91e63',
-    'K-Galaxloop': '#3498db',
-    'Void Station': '#f1c40f',
-    'Cosmic Hawaii': '#9b59b6',
-    'Arcane Peru': '#2ecc71',
-    'X-Mars': '#e67e22'
+      'Auroral Rainbow': '#e91e63',
+      'K-Galaxloop': '#3498db',
+      'Void Station': '#7F7F7F',
+      'Cosmic Hawaii': '#9b59b6',
+      'Arcane Peru': '#66ff33c1',
+      'X-Mars': '#ffaa00'
   };
   return realmColorMap[realm] || '#2D2A4A';
 };
@@ -332,10 +332,8 @@ export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterface
     // 간소화된 환영 메시지
     const welcomeMessage: Message = {
       id: "welcome",
-      content: `[SYSTEM INIT]
-
-${character.name} / ${character.realm} / ${character.species} / ${character.personality}
-
+      content: `
+${character.personality} ** ${character.name} ** from ${character.realm} 
 Persona loaded successfully...
 How may I assist your consciousness today?`,
       isUser: false,
@@ -525,7 +523,23 @@ How may I assist your consciousness today?`,
                     : "mr-auto bg-secondary/10 text-foreground border-secondary/30"
                 } max-w-[80%] p-3 rounded border text-sm`}
               >
-                <div className="whitespace-pre-wrap">{message.content}</div>
+                <div className="whitespace-pre-wrap">
+                  {/* Render message content as plain text, but if it's a non-user message
+                      and contains the character's name, bold only the name. This keeps
+                      existing newline handling via CSS while allowing inline bolding. */}
+                  {typeof message.content === 'string' && !message.isUser && message.content.includes(character.name) ? (
+                    // Split on the character name and interleave <strong> nodes so only
+                    // the name appears bold. We preserve other parts (including newlines).
+                    message.content.split(character.name).map((part, idx, arr) => (
+                      <span key={idx}>
+                        {part}
+                        {idx < arr.length - 1 && <strong>{character.name}</strong>}
+                      </span>
+                    ))
+                  ) : (
+                    message.content
+                  )}
+                </div>
                 <div className="text-xs text-muted-foreground mt-1">
                   {message.timestamp.toLocaleTimeString()}
                 </div>
