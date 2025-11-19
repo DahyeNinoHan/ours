@@ -300,7 +300,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
         {/* Phase instruction area - moved above controls, no overlay/absolute/rotate */}
         <div className="w-full flex flex-col items-center mb-6">
           <div className="text-center rounded-lg p-4">
-            <div className="text-3xl font-bold neon-text mb-2">
+            <div className="text-2xl font-bold neon-text mb-2">
               {BREATHING_PHASES[currentPhase].instruction}
             </div>
             <Progress 
