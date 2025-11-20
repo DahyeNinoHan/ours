@@ -9,7 +9,7 @@ import PrismSVG from "./characters/PrismSVG";
 import ShamanSVG from "./characters/ShamanSVG";
 import QuantumSVG from "./characters/QuantumSVG";
 import NeuralSVG from "./characters/NeuralSVG";
-import { ArrowLeft, Play, Pause, RotateCcw } from "lucide-react";
+import { ArrowLeft, Play, Pause, RotateCcw, Monitor, X } from "lucide-react";
 
 interface DigitalMeditationProps {
   character: Character;
@@ -29,6 +29,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
   const [sessionTime, setSessionTime] = useState(0);
   const [completedCycles, setCompletedCycles] = useState(0);
   const [particlesActive, setParticlesActive] = useState(false);
+  const [isScreenSaver, setIsScreenSaver] = useState(false);
 
   // Particle generation
   useEffect(() => {
@@ -193,10 +194,117 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
     });
   };
 
+  // Close screensaver on Escape
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isScreenSaver) {
+        setIsScreenSaver(false);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isScreenSaver]);
+
+  // Extract the meditation visual so we can reuse it in screensaver mode
+  const renderMeditationVisual = () => (
+    <div className="relative mb-28">
+      <div 
+        className={`meditation-visual transition-all duration-${BREATHING_PHASES[currentPhase].duration} ease-in-out ${getCircleScale()}`}
+        style={{
+          width: 'min(80vw, 480px)',
+          height: 'min(80vw, 480px)',
+          boxSizing: 'border-box',
+          maxWidth: '560px',
+          maxHeight: '560px'
+        }}
+      >
+        {/* Multi-layer breathing circles */}
+        <div className="breathing-circle breathing-circle-1"></div>
+        <div className="breathing-circle breathing-circle-2"></div>
+        <div className="breathing-circle breathing-circle-3"></div>
+
+        {/* Character container with floating animation */}
+        <div className="meditation-character-container">
+          <div className="meditation-character-svg">
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+              {character.species === 'Neon Ghost' && (
+                <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-3/4 h-3/4" />
+              )}
+              {character.species === 'Supernova Microbe' && (
+                <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-3/4 h-3/4" />
+              )}
+              {character.species === 'Quantum Fairy' && (
+                <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-3/4 h-3/4" />
+              )}
+              {character.species === 'Cyber Shaman' && (
+                <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-3/4 h-3/4" />
+              )}
+              {character.species === 'Neural Entity' && (
+                <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-3/4 h-3/4" />
+              )}
+              {character.species === 'Echo Prism' && (
+                <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-3/4 h-3/4" />
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Meditation particles */}
+        <div className="absolute inset-0 overflow-hidden" id="meditation-particles">
+          {renderMeditationParticles()}
+        </div>
+      </div>
+    </div>
+  );
+
+  // If screensaver mode is active, render a minimal fullscreen view with only
+  // the gradient, the meditation visual (with particles), the energy particles
+  // container, and a small exit button. Cursor is hidden in this mode.
+  if (isScreenSaver) {
+    return (
+      <div className="min-h-screen bg-background relative overflow-hidden cursor-none transition-all duration-1000">
+        {/* Background gradient (kept) */}
+        <div className={`absolute inset-0 bg-gradient-radial ${currentStyle.gradient}`} />
+
+        {/* Exit button (top-right) */}
+        <button
+          onClick={() => setIsScreenSaver(false)}
+          aria-label="Exit Screen Saver"
+          className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/30 hover:bg-black/40 transform transition-all duration-200 hover:scale-110 text-white/90"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Centered meditation visual (only thing visible besides gradient) */}
+        <div className="relative z-40 flex items-center justify-center min-h-screen">
+          {renderMeditationVisual()}
+        </div>
+
+        {/* Energy particles container (background) */}
+        <div className="absolute inset-0 pointer-events-none" id="energy-particles-container"></div>
+
+        {/* Bottom neon line (optional) */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden transition-all duration-1000">
       {/* Background gradient */}
       <div className={`absolute inset-0 bg-gradient-radial ${currentStyle.gradient}`} />
+
+      {/* Screen Saver toggle (top-center) */}
+      <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-50">
+        <button
+          onClick={() => setIsScreenSaver(true)}
+          aria-label="Enter Screen Saver"
+          className="flex items-center gap-2 px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm text-white/90 hover:scale-105 transition-transform duration-200 hover:shadow-lg"
+        >
+          <Monitor className="w-4 h-4" />
+          <span className="hidden sm:inline text-sm">Screen Saver</span>
+        </button>
+      </div>
 
       {/* Header + Session stats row */}
       <div className="relative z-10 px-4 pb-4 pt-1.5 md:p-6">
@@ -247,55 +355,7 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
 
       {/* Main meditation interface */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-6">
-        {/* Enhanced meditation circle */}
-  <div className="relative mb-28">
-          <div 
-            className={`meditation-visual transition-all duration-${BREATHING_PHASES[currentPhase].duration} ease-in-out ${getCircleScale()}`}
-            style={{
-              width: 'min(80vw, 480px)',
-              height: 'min(80vw, 480px)',
-              boxSizing: 'border-box',
-              maxWidth: '560px',
-              maxHeight: '560px'
-            }}
-          >
-            {/* Multi-layer breathing circles */}
-            <div className="breathing-circle breathing-circle-1"></div>
-            <div className="breathing-circle breathing-circle-2"></div>
-            <div className="breathing-circle breathing-circle-3"></div>
-
-            {/* Character container with floating animation */}
-            <div className="meditation-character-container">
-              <div className="meditation-character-svg">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                  {character.species === 'Neon Ghost' && (
-                    <GhostSVG colors={{ baseColor: '#e91e63', secondaryColor: '#3498db', accentColor: '#f1c40f' }} className="w-3/4 h-3/4" />
-                  )}
-                  {character.species === 'Supernova Microbe' && (
-                    <MicrobeSVG colors={{ baseColor: '#ff69b4', secondaryColor: '#32cd32', accentColor: '#90ee90' }} className="w-3/4 h-3/4" />
-                  )}
-                  {character.species === 'Quantum Fairy' && (
-                    <QuantumSVG colors={{ baseColor: '#ffd700', secondaryColor: '#ff1493', accentColor: '#00bfff' }} className="w-3/4 h-3/4" />
-                  )}
-                  {character.species === 'Cyber Shaman' && (
-                    <ShamanSVG colors={{ baseColor: '#9b59b6', secondaryColor: '#e91e63', accentColor: '#f39c12' }} className="w-3/4 h-3/4" />
-                  )}
-                  {character.species === 'Neural Entity' && (
-                    <NeuralSVG colors={{ baseColor: '#ff6b35', secondaryColor: '#ffe66d', accentColor: '#4ecdc4' }} className="w-3/4 h-3/4" />
-                  )}
-                  {character.species === 'Echo Prism' && (
-                    <PrismSVG colors={{ baseColor: '#20b2aa', secondaryColor: '#87ceeb', accentColor: '#00ced1' }} className="w-3/4 h-3/4" />
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Meditation particles */}
-            <div className="absolute inset-0 overflow-hidden" id="meditation-particles">
-              {renderMeditationParticles()}
-            </div>
-          </div>
-        </div>
+        {renderMeditationVisual()}
 
         {/* Phase instruction area - moved above controls, no overlay/absolute/rotate */}
         <div className="w-full flex flex-col items-center mb-6">
