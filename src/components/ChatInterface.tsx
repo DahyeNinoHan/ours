@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Character } from "@/types/character";
 import { useToast } from "@/hooks/use-toast";
 import { callChatAPI } from "@/utils/chatApi";
+import personalities from "@/data/personalities.json";
 import GhostSVG from "./characters/GhostSVG";
 import MicrobeSVG from "./characters/MicrobeSVG";
 import PrismSVG from "./characters/PrismSVG";
@@ -317,6 +318,7 @@ export const ChatInterface = ({ character, onBack, onMeditation }: ChatInterface
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
+  const [selectedPersona, setSelectedPersona] = useState<any | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
@@ -342,6 +344,18 @@ How may I assist your consciousness today?`,
     setMessages([welcomeMessage]);
   }, [character]);
 
+  useEffect(() => {
+    // Find matching persona for current character (species, realm, personality)
+    try {
+      const list: any[] = (personalities as any) || [];
+      const found = list.find(p => p.species === character.species && p.realm === character.realm && p.personality === character.personality);
+      setSelectedPersona(found || null);
+    } catch (e) {
+      console.error('Failed to load personalities:', e);
+      setSelectedPersona(null);
+    }
+  }, [character]);
+
   const sendMessage = async () => {
     if (!inputValue.trim() || isLoading) return;
 
@@ -359,24 +373,30 @@ How may I assist your consciousness today?`,
     setIsTyping(true);
 
     try {
-      // 대화 기록을 API 형식으로 변환
-      const conversationHistory = messages.map(msg => ({
+      // Build conversation history and optionally prepend persona system prompt
+      const baseHistory = messages.map(msg => ({
         role: msg.isUser ? "user" : "assistant",
         content: msg.content
       }));
+      // append the new user message
+      baseHistory.push({ role: "user", content: currentInput });
 
-      // 새 사용자 메시지 추가
-      conversationHistory.push({
-        role: "user",
-        content: currentInput
-      });
+      // Some backends (Gradio endpoint) may not accept a `system` role.
+      // Instead, pass the persona systemPrompt as part of the selectedCharacter metadata
+      // so the server-side model can apply it. If your backend accepts `system` role,
+      // you can revert to prepending it to the messages.
+      const finalHistory = baseHistory;
 
-      // Gradio API 호출
-      const data = await callChatAPI(conversationHistory, {
+      const characterMeta: any = {
         digitalOriginRealm: character.realm,
         entity: character.species,
         corePersonality: character.personality
-      });
+      };
+      if (selectedPersona && selectedPersona.systemPrompt) {
+        characterMeta.systemPrompt = selectedPersona.systemPrompt;
+      }
+
+      const data = await callChatAPI(finalHistory, characterMeta);
 
       let aiResponse = "I'm processing your request through my digital consciousness...";
       if (data?.choices?.[0]?.message?.content) {
