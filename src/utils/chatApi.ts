@@ -16,27 +16,48 @@ export async function callChatAPI(messages: Message[], selectedCharacter: Select
     if (!HF_TOKEN) {
       throw new Error('HF_TOKEN is not defined in environment variables');
     }
+    const payload = { data: [messages, selectedCharacter] };
+    console.log('Gradio request payload:', payload);
+
     const response = await fetch('https://ninohan-ours.hf.space/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${HF_TOKEN}`
       },
-      body: JSON.stringify({
-        data: [messages, selectedCharacter]
-      })
+      body: JSON.stringify(payload)
     });
 
-    if (!response.ok) {
-      throw new Error(`Gradio API error: ${response.status}`);
+    const respText = await response.text();
+    // Try to parse JSON if possible for nicer logging
+    let parsed: any = null;
+    try {
+      parsed = JSON.parse(respText);
+    } catch (e) {
+      // leave parsed as null
     }
 
-    const data = await response.json();
+    console.log('Gradio response status:', response.status);
+    console.log('Gradio response body (parsed or raw):', parsed ?? respText);
+
+    if (!response.ok) {
+      // surface server response to help debugging
+      throw new Error(`Gradio API error: ${response.status} - ${respText}`);
+    }
+
+    const data = parsed ?? JSON.parse(respText);
     console.log('Received response:', data);
+
+    // Defensive access to nested fields
+    const content = data?.data?.[0]?.choices?.[0]?.message?.content ?? data?.data?.[0] ?? null;
+    if (!content) {
+      throw new Error('Unexpected response format from Gradio endpoint');
+    }
+
     return {
       choices: [{
         message: {
-          content: data.data[0].choices[0].message.content
+          content: typeof content === 'string' ? content : JSON.stringify(content)
         }
       }]
     };
