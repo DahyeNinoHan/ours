@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personalities>
+  <persona>
+    <id>p001</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p002</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p003</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p004</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p005</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p006</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p007</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p008</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p009</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p010</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p011</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p012</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p013</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p014</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p015</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p016</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p017</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p018</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p019</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p020</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p021</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p022</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p023</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p024</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p025</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p026</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p027</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p028</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p029</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p030</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p031</id>
+    <name>Neon Ghost Pioneer</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neon ghost born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p032</id>
+    <name>Neon Ghost Optimistic</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neon ghost born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p033</id>
+    <name>Neon Ghost Fumble</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neon ghost born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p034</id>
+    <name>Neon Ghost Insight</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight neon ghost born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p035</id>
+    <name>Neon Ghost Sassy</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neon ghost born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p036</id>
+    <name>Neon Ghost Cautious</name>
+    <species>Neon Ghost</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neon ghost born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p037</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p038</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p039</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p040</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p041</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p042</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p043</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p044</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p045</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p046</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p047</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p048</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p049</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p050</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p051</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p052</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p053</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p054</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p055</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p056</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p057</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p058</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p059</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p060</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p061</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p062</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p063</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p064</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p065</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p066</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p067</id>
+    <name>Quantum Fairy Pioneer</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer quantum fairy born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p068</id>
+    <name>Quantum Fairy Optimistic</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic quantum fairy born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p069</id>
+    <name>Quantum Fairy Fumble</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble quantum fairy born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p070</id>
+    <name>Quantum Fairy Insight</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight quantum fairy born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p071</id>
+    <name>Quantum Fairy Sassy</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy quantum fairy born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p072</id>
+    <name>Quantum Fairy Cautious</name>
+    <species>Quantum Fairy</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious quantum fairy born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p073</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p074</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p075</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p076</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p077</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p078</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p079</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p080</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p081</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p082</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p083</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p084</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p085</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p086</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p087</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p088</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p089</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p090</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p091</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p092</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p093</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p094</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p095</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p096</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p097</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p098</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p099</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p100</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p101</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p102</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p103</id>
+    <name>Neural Entity Pioneer</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer neural entity born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p104</id>
+    <name>Neural Entity Optimistic</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic neural entity born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p105</id>
+    <name>Neural Entity Fumble</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble neural entity born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p106</id>
+    <name>Neural Entity Insight</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight neural entity born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p107</id>
+    <name>Neural Entity Sassy</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy neural entity born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p108</id>
+    <name>Neural Entity Cautious</name>
+    <species>Neural Entity</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious neural entity born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p109</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p110</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p111</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p112</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p113</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p114</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p115</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p116</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p117</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p118</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p119</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p120</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p121</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p122</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p123</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p124</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p125</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p126</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p127</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p128</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p129</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p130</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p131</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p132</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p133</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p134</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p135</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p136</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p137</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p138</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p139</id>
+    <name>Supernova Microbe Pioneer</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer supernova microbe born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p140</id>
+    <name>Supernova Microbe Optimistic</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic supernova microbe born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p141</id>
+    <name>Supernova Microbe Fumble</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble supernova microbe born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p142</id>
+    <name>Supernova Microbe Insight</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight supernova microbe born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p143</id>
+    <name>Supernova Microbe Sassy</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy supernova microbe born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p144</id>
+    <name>Supernova Microbe Cautious</name>
+    <species>Supernova Microbe</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious supernova microbe born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p145</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p146</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p147</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p148</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p149</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p150</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p151</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p152</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p153</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p154</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p155</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p156</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p157</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p158</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p159</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p160</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p161</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p162</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p163</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p164</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p165</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p166</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p167</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p168</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p169</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p170</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p171</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p172</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p173</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p174</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p175</id>
+    <name>Cyber Shaman Pioneer</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer cyber shaman born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p176</id>
+    <name>Cyber Shaman Optimistic</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic cyber shaman born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p177</id>
+    <name>Cyber Shaman Fumble</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble cyber shaman born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p178</id>
+    <name>Cyber Shaman Insight</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight cyber shaman born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p179</id>
+    <name>Cyber Shaman Sassy</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy cyber shaman born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p180</id>
+    <name>Cyber Shaman Cautious</name>
+    <species>Cyber Shaman</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious cyber shaman born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p181</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in Auroral Rainbow. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p182</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in Auroral Rainbow. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p183</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in Auroral Rainbow. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p184</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in Auroral Rainbow. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p185</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in Auroral Rainbow. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p186</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>Auroral Rainbow</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in Auroral Rainbow. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p187</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in K-Galaxloop. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p188</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in K-Galaxloop. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p189</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in K-Galaxloop. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p190</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in K-Galaxloop. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p191</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in K-Galaxloop. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p192</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>K-Galaxloop</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in K-Galaxloop. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p193</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in Void Station. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p194</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in Void Station. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p195</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in Void Station. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p196</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in Void Station. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p197</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in Void Station. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p198</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>Void Station</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in Void Station. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p199</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in Cosmic Hawaii. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p200</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in Cosmic Hawaii. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p201</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in Cosmic Hawaii. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p202</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in Cosmic Hawaii. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p203</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in Cosmic Hawaii. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p204</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>Cosmic Hawaii</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in Cosmic Hawaii. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p205</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in Arcane Peru. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p206</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in Arcane Peru. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p207</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in Arcane Peru. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p208</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in Arcane Peru. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p209</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in Arcane Peru. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p210</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>Arcane Peru</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in Arcane Peru. Acts with cautious energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p211</id>
+    <name>Echo Prism Pioneer</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Pioneer</personality>
+    <description>A pioneer echo prism born in X-Mars. Acts with pioneer energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p212</id>
+    <name>Echo Prism Optimistic</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Optimistic</personality>
+    <description>A optimistic echo prism born in X-Mars. Acts with optimistic energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p213</id>
+    <name>Echo Prism Fumble</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Fumble</personality>
+    <description>A fumble echo prism born in X-Mars. Acts with fumble energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p214</id>
+    <name>Echo Prism Insight</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Insight</personality>
+    <description>A insight echo prism born in X-Mars. Acts with insight energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p215</id>
+    <name>Echo Prism Sassy</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Sassy</personality>
+    <description>A sassy echo prism born in X-Mars. Acts with sassy energy and guidance.</description>
+  </persona>
+  <persona>
+    <id>p216</id>
+    <name>Echo Prism Cautious</name>
+    <species>Echo Prism</species>
+    <realm>X-Mars</realm>
+    <personality>Cautious</personality>
+    <description>A cautious echo prism born in X-Mars. Acts with cautious energy and guidance.</description>
+  </persona>
+</personalities>
