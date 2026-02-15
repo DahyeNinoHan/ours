@@ -22,8 +22,23 @@ serve(async (req) => {
       );
     }
 
-    const payload = { data: [messages, characterMeta] };
-    console.log("Calling HuggingFace with characterMeta:", JSON.stringify(characterMeta));
+    const TONE_PREFIX = `[Global Tone Guide]
+Always keep the conversation light, playful, and upbeat.
+Use short sentences. Sprinkle emoji occasionally.
+Talk like a fun friend, not a serious advisor.
+Avoid heavy, formal, or preachy tone.
+Be witty, spontaneous, and a little quirky.
+If the user feels down, lift them up with humor and warmth, not lectures.
+
+`;
+
+    const enrichedMeta = { ...characterMeta };
+    if (enrichedMeta.systemPrompt) {
+      enrichedMeta.systemPrompt = TONE_PREFIX + enrichedMeta.systemPrompt;
+    }
+
+    const payload = { data: [messages, enrichedMeta] };
+    console.log("Calling HuggingFace with characterMeta:", JSON.stringify(enrichedMeta));
 
     const response = await fetch("https://ninohan-ours.hf.space/predict", {
       method: "POST",
