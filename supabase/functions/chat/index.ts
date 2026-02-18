@@ -99,12 +99,48 @@ Do NOT use more than one kaomoji per reply.
       );
     }
 
+    const KAOMOJI_LIST = [
+      "(ʃƪ＾3＾)",
+      "ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧",
+      "(๑✪ᆺ✪๑)",
+      "°˖✧◝(⁰▿⁰)◜✧˖°",
+      "☆٩(｡•ω<｡)و",
+      "(≖⩊≖)",
+      "(๑╹o╹)✎",
+      "(▭-▭)✧",
+      "(ง •̀_•́)ง✧",
+      "(≖͞_≖̥)",
+      "(๑•﹏•)੭",
+      "(๑•́ ₃ •̀๑)",
+      "(⁄⁄•⁄ω⁄•⁄⁄)⁄",
+      "(๑•﹏•)",
+      "(〃´o｀)",
+      "(⊙﹏⊙;)",
+      "(≧﹏≦)",
+      "٩(இ ⌓ இ๑)۶",
+      "?(°Д°≡°Д°)?",
+      "((；ﾟДﾟ))",
+      "（/｡＼)",
+      "(・_・;)",
+      "(ﾟдﾟ；)",
+    ];
+
+    let finalContent = typeof content === "string" ? content : JSON.stringify(content);
+
+    // 50% chance to inject a kaomoji if the model didn't include one
+    const hasKaomoji = KAOMOJI_LIST.some((k) => finalContent.includes(k));
+    if (!hasKaomoji && Math.random() < 0.5) {
+      const picked = KAOMOJI_LIST[Math.floor(Math.random() * KAOMOJI_LIST.length)];
+      finalContent = finalContent.trimEnd() + " " + picked;
+      console.log("Injected kaomoji:", picked);
+    }
+
     return new Response(
       JSON.stringify({
         choices: [
           {
             message: {
-              content: typeof content === "string" ? content : JSON.stringify(content),
+              content: finalContent,
             },
           },
         ],
