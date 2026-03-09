@@ -312,17 +312,15 @@ export const DigitalMeditation = ({ character, onBack }: DigitalMeditationProps)
           <div className="flex gap-2 mb-6 justify-center md:justify-start">
             <Button
               variant="outline"
-              size="sm"
               onClick={() => window.location.assign('/main')}
-              className="text-xs min-w-[120px]"
+              className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
             >
               Main
             </Button>
             <Button 
               variant="outline" 
-              size="sm"
               onClick={onBack}
-              className="text-xs min-w-[120px]"
+              className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
             >
               Chat
             </Button>
