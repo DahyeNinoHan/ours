@@ -62,17 +62,20 @@ export const CharacterCreator = ({
     return !hasSeenPopup; // Show popup only if user hasn't seen it
   });
   const [showAwakening, setShowAwakening] = useState(false);
-  const [character, setCharacter] = useState<Character>({
-    name: "QUANTUM ENTITY",
-    age: 0, // Start at 0 for Main Sequence Star phase
-    realm: "Auroral Rainbow",
-    species: "Neon Ghost",
-    personality: "Pioneer",
-    description: "",
-    image: "",
-    color: "#32cd32"
+  const [character, setCharacter] = useState<Character>(() => {
+    const { age, realm, personality } = getRandomInitialValues();
+    return {
+      name: "QUANTUM ENTITY",
+      age,
+      realm,
+      species: "Neon Ghost",
+      personality,
+      description: "",
+      image: "",
+      color: "#32cd32"
+    };
   });
-  const [cosmicAge, setCosmicAge] = useState<number>(0);
+  const [cosmicAge, setCosmicAge] = useState<number>(() => mapToOriginalRange(character.age));
 
   // Cosmic Phases Configuration
   const COSMIC_PHASES: CosmicPhase[] = [
