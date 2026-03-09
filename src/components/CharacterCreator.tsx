@@ -547,7 +547,7 @@ Initialized with love in JavaScript ❤️`;
         <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
           <div className="text-center space-y-16">
             <div className="animate-fade-in">
-                <p className="text-white/80 text-2xl font-mono tracking-[0.1em] mb-24">
+                <p className="text-primary/80 text-2xl font-mono tracking-[0.1em] mb-24">
                 Your entity is approaching you...
               </p>
             </div>
