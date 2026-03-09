@@ -30,6 +30,28 @@ interface Position {
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
 }
+
+// Module-level helper: map slider range to cosmic age range (-40 to 40)
+const mapToOriginalRange = (age: number): number => {
+  const sliderMin = -3999817093;
+  const sliderMax = 3920896199;
+  const cosmicMin = -40;
+  const cosmicMax = 40;
+  const normalizedAge = (age - sliderMin) / (sliderMax - sliderMin);
+  return cosmicMin + normalizedAge * (cosmicMax - cosmicMin);
+};
+
+// Generate random initial values for realm, personality, and age (species fixed to Neon Ghost)
+const getRandomInitialValues = () => {
+  const realms = Object.keys(DIGITAL_REALMS) as Array<keyof typeof DIGITAL_REALMS>;
+  const personalities = Object.keys(PERSONALITY_TRAITS) as Array<keyof typeof PERSONALITY_TRAITS>;
+  const sliderMin = -3999817093;
+  const sliderMax = 3920896199;
+  const age = Math.floor(sliderMin + Math.random() * (sliderMax - sliderMin));
+  const realm = realms[Math.floor(Math.random() * realms.length)];
+  const personality = personalities[Math.floor(Math.random() * personalities.length)];
+  return { age, realm, personality };
+};
 export const CharacterCreator = ({
   onComplete
 }: CharacterCreatorProps) => {
@@ -40,17 +62,20 @@ export const CharacterCreator = ({
     return !hasSeenPopup; // Show popup only if user hasn't seen it
   });
   const [showAwakening, setShowAwakening] = useState(false);
-  const [character, setCharacter] = useState<Character>({
-    name: "QUANTUM ENTITY",
-    age: 0, // Start at 0 for Main Sequence Star phase
-    realm: "Auroral Rainbow",
-    species: "Neon Ghost",
-    personality: "Pioneer",
-    description: "",
-    image: "",
-    color: "#32cd32"
+  const [character, setCharacter] = useState<Character>(() => {
+    const { age, realm, personality } = getRandomInitialValues();
+    return {
+      name: "QUANTUM ENTITY",
+      age,
+      realm,
+      species: "Neon Ghost",
+      personality,
+      description: "",
+      image: "",
+      color: "#32cd32"
+    };
   });
-  const [cosmicAge, setCosmicAge] = useState<number>(0);
+  const [cosmicAge, setCosmicAge] = useState<number>(() => mapToOriginalRange(character.age));
 
   // Cosmic Phases Configuration
   const COSMIC_PHASES: CosmicPhase[] = [
@@ -102,17 +127,6 @@ export const CharacterCreator = ({
       'X-Mars': '#ffaa00'
     };
     return realmColorMap[realm] || '#2D2A4A'; // Default color if realm not found
-  };
-
-  const mapToOriginalRange = (age: number): number => {
-    // Map from slider range (-3999817093 to 3920896199) to cosmic range (-40 to 40)
-    const sliderMin = -3999817093;
-    const sliderMax = 3920896199;
-    const cosmicMin = -40;
-    const cosmicMax = 40;
-    
-    const normalizedAge = (age - sliderMin) / (sliderMax - sliderMin);
-    return cosmicMin + normalizedAge * (cosmicMax - cosmicMin);
   };
 
   const getCosmicPhase = (mappedAge: number): CosmicPhase => {
