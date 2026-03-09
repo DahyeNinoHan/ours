@@ -30,6 +30,28 @@ interface Position {
 interface CharacterCreatorProps {
   onComplete: (character: Character) => void;
 }
+
+// Module-level helper: map slider range to cosmic age range (-40 to 40)
+const mapToOriginalRange = (age: number): number => {
+  const sliderMin = -3999817093;
+  const sliderMax = 3920896199;
+  const cosmicMin = -40;
+  const cosmicMax = 40;
+  const normalizedAge = (age - sliderMin) / (sliderMax - sliderMin);
+  return cosmicMin + normalizedAge * (cosmicMax - cosmicMin);
+};
+
+// Generate random initial values for realm, personality, and age (species fixed to Neon Ghost)
+const getRandomInitialValues = () => {
+  const realms = Object.keys(DIGITAL_REALMS) as Array<keyof typeof DIGITAL_REALMS>;
+  const personalities = Object.keys(PERSONALITY_TRAITS) as Array<keyof typeof PERSONALITY_TRAITS>;
+  const sliderMin = -3999817093;
+  const sliderMax = 3920896199;
+  const age = Math.floor(sliderMin + Math.random() * (sliderMax - sliderMin));
+  const realm = realms[Math.floor(Math.random() * realms.length)];
+  const personality = personalities[Math.floor(Math.random() * personalities.length)];
+  return { age, realm, personality };
+};
 export const CharacterCreator = ({
   onComplete
 }: CharacterCreatorProps) => {
