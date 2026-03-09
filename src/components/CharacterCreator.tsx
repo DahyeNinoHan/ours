@@ -577,14 +577,16 @@ Initialized with love in JavaScript ❤️`;
                   {/* Buttons at the end of lines */}
                   <div className="flex flex-col items-center w-full max-w-2xl pt-4 gap-y-6">
                      <Button
+                       variant="outline"
                        onClick={() => navigate('/chat', { state: { character } })}
-                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl"
+                      className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
                     >
                       Chat
                     </Button>
                      <Button
+                       variant="outline"
                        onClick={() => navigate('/meditation', { state: { character } })}
-                      className="w-11/12 py-6 bg-white text-black font-bold border border-white/30 hover:bg-white/80 hover:border-white/50 transition-all duration-300 font-mono tracking-wider text-2xl"
+                      className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
                     >
                       Meditation
                     </Button>

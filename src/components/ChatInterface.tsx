@@ -606,18 +606,16 @@ How may I assist your consciousness today?`,
           <div className="w-full flex justify-center items-center gap-4 p-4 border-t border-primary/30 mt-auto">
             <Button 
               variant="outline" 
-              size="sm" 
               onClick={() => navigate("/main")}
-              className="text-xs min-w-[120px]"
+              className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
             >
               Main
             </Button>
             {onMeditation && (
               <Button 
                 variant="outline" 
-                size="sm" 
                 onClick={onMeditation}
-                className="text-xs min-w-[120px]"
+                className="font-mono tracking-wider min-w-[140px] py-2 text-sm border-primary/50 hover:border-primary hover:shadow-[0_0_15px_hsl(120,100%,50%,0.3)] glow-effect"
               >
                 Meditation
               </Button>
