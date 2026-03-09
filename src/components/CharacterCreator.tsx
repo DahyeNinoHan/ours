@@ -129,17 +129,6 @@ export const CharacterCreator = ({
     return realmColorMap[realm] || '#2D2A4A'; // Default color if realm not found
   };
 
-  const mapToOriginalRange = (age: number): number => {
-    // Map from slider range (-3999817093 to 3920896199) to cosmic range (-40 to 40)
-    const sliderMin = -3999817093;
-    const sliderMax = 3920896199;
-    const cosmicMin = -40;
-    const cosmicMax = 40;
-    
-    const normalizedAge = (age - sliderMin) / (sliderMax - sliderMin);
-    return cosmicMin + normalizedAge * (cosmicMax - cosmicMin);
-  };
-
   const getCosmicPhase = (mappedAge: number): CosmicPhase => {
     return COSMIC_PHASES.find(phase => 
       mappedAge >= phase.minAge && mappedAge < phase.maxAge
